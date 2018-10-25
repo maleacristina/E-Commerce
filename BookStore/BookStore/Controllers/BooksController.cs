@@ -49,13 +49,13 @@ namespace BookStore.Controllers
             return View(categoryModel);
         }
 
-        //// GET: /Books/CategoryMenu
-        //[ChildActionOnly]
+        // GET: /Books/CategoryMenu
+        [ChildActionOnly]
 
-        //public ActionResult CategoryMenu()
-        //{
-        //    var categories = _context.Categories.ToList();
-        //    return PartialView(categories);
-        //}
+        public ActionResult CategoryMenu()
+        {
+            var categories = _context.Categories.ToList();
+            return PartialView(categories);
+        }
     }
 }
