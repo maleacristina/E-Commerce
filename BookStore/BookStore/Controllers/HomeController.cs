@@ -1,30 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using BookStore.Models;
 
 namespace BookStore.Controllers
 {
     public class HomeController : Controller
     {
+        ApplicationDbContext _context;
+
+        public HomeController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index", "Books");
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
+        //public ActionResult Contact()
+        //{
+        //    ViewBag.Message = "Your contact page.";
 
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
+        //    return View();
+        //}
     }
 }

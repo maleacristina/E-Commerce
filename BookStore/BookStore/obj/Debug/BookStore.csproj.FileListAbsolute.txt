@@ -1,3 +1,9 @@
+C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\System.IO.Compression.dll
+C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\VBCSCompiler.exe
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\ApplicationInsights.config
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\BookStore.dll.config
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\BookStore.dll
@@ -9,13 +15,9 @@ C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\csi.exe
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\csi.exe.config
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\csi.rsp
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\Microsoft.CodeAnalysis.dll
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\Microsoft.Win32.Primitives.dll
@@ -25,7 +27,6 @@ C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\System.Co
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\System.Diagnostics.Process.dll
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\System.IO.Compression.dll
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\System.IO.FileSystem.dll
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\System.IO.FileSystem.Primitives.dll
@@ -48,7 +49,6 @@ C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\System.Xm
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\vbc.exe
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\vbc.exe.config
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\vbc.rsp
-C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\VBCSCompiler.exe
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\Antlr3.Runtime.dll
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\EntityFramework.dll
@@ -113,10 +113,9 @@ C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\Microsoft.AI.Dep
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\Microsoft.AI.Web.xml
-C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\obj\Debug\BookStore.csprojResolveAssemblyReference.cache
+C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\obj\Debug\BookStore.Migrations.AddBookAndCategoryModel.resources
+C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\obj\Debug\BookStore.csproj.GenerateResource.cache
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\obj\Debug\BookStore.csproj.CoreCompileInputs.cache
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\obj\Debug\BookStore.csproj.CopyComplete
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\obj\Debug\BookStore.dll
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\obj\Debug\BookStore.pdb
-C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\obj\Debug\BookStore.Migrations.AddBookAndCategoryModel.resources
-C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\obj\Debug\BookStore.csproj.GenerateResource.cache
