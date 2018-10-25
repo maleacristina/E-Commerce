@@ -1,8 +1,22 @@
 ﻿@model BookStore.Models.Category
 
 @{
-    ViewBag.Title = "title";
-    Layout = "_Layout";
+    ViewBag.Title = "Browse";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>title</h2>
+<ul class="display-cake">
+    @foreach (var book in Model.Books)
+    {
+        <li>
+
+
+            <a href="@Url.Action("Details",
+                         new { id = book.BookId })">
+                <img src='/Images/@book.ImagePath' width="250" height="180" /><br />
+                <span>@book.Name</span>
+            </a>
+
+        </li>
+    }
+</ul>

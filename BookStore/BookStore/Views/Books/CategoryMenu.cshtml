@@ -1,8 +1,25 @@
 ﻿@model System.Collections.Generic.List<BookStore.Models.Category>
 
 @{
-    ViewBag.Title = "title";
-    Layout = "_Layout";
+    ViewBag.Title = "CategoryMenu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>title</h2>
+<div class="box info category">
+    <div class="box-heading">Categorii<i class="fa fa-plus-circle"></i></div>
+    <div class="box-content">
+        <div class="box-category">
+            <ul>
+                @foreach (var category in Model)
+                {
+
+                    <li>
+                        @Html.ActionLink(category.Nume, "Browse", "Books", new { Category = category.Nume }, null)
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+<ul id="categories"></ul>

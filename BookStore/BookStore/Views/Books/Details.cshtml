@@ -1,8 +1,29 @@
 ﻿@model BookStore.Models.Book
 
 @{
-    ViewBag.Title = "title";
-    Layout = "_Layout";
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>title</h2>
+<div>
+    <dl class="dl-horizontal">
+
+        <dd class="image">
+            <img src='/Images/@Model.ImagePath' />
+
+        </dd>
+        <dd class="title">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dd class="description">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dd class="price">
+            Pret
+            @Html.DisplayFor(model => model.Price) lei
+        </dd>
+        <dd>
+            @Html.ActionLink("Adauga in cos", "AddToCart", "ShoppingCart", new { id = @Model.BookId }, new { @class = "btn btn-primary" })
+        </dd>
+    </dl>
+</div>
