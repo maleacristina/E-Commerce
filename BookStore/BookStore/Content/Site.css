@@ -22,3 +22,158 @@ select,
 textarea {
     max-width: 280px;
 }
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.navbar-inverse {
+    background-color: #16160e;
+}
+
+    .navbar-inverse .navbar-nav > li > a {
+        color: #fff;
+    }
+
+    .navbar-inverse .navbar-brand {
+        font-size: 25px;
+        color: white;
+    }
+
+        .navbar-inverse .navbar-brand > a {
+            color: #fff;
+        }
+
+#main {
+    display: inline-block;
+    width: 910px;
+    margin-left: 250px;
+    margin-top: -310px;
+}
+
+.box {
+    width: 220px;
+}
+
+.box-category > ul {
+    list-style: none;
+}
+
+.box-content {
+    display: block;
+}
+
+.box .box-heading {
+    padding: 8px;
+    line-height: 25px;
+    font-size: 20px;
+    background-color: #c09265;
+    width: 180px;
+    margin-left: 40px;
+    margin-top: 50px;
+}
+
+.display-book {
+    list-style: none;
+    display: block;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+    .display-book > li {
+        display: inline-block;
+        margin-top: 0;
+        padding: 0 15px;
+    }
+
+.dl-horizontal {
+    margin-top: 100px;
+}
+
+    .dl-horizontal .image {
+        margin-left: 50px;
+    }
+
+    .dl-horizontal .title {
+        font-size: 20px;
+        margin-left: 50px;
+        margin-top: 15px;
+    }
+
+    .dl-horizontal .description {
+        margin-left: 50px;
+        margin-top: 15px;
+        width: 450px;
+    }
+
+    .dl-horizontal .price {
+        margin: 15px 50px;
+    }
+
+.shopping-cart {
+    margin-top: 450px;
+}
+
+.title-cos {
+    margin-top: 100px;
+}
+
+.shopping-cart .table {
+    margin-top: -400px;
+}
+
+.caption-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.button-checkout {
+    margin-top: 150px;
+    text-align: center;
+}
+
+/*#update-message {
+    margin-top: -900px;
+    text-align: center;
+}*/
+
+.register-title {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-top: -300px;
+}
+
+.col-md-10 {
+    margin-bottom: 15px;
+}
+
+.row {
+    margin-top: 45px;
+}
+
+.col-md-4 {
+    width: 200px;
+    margin-top: -800px;
+}
+
+.form-horizontal {
+    margin-top: 350px;
+}
