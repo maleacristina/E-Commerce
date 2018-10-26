@@ -51,7 +51,6 @@ namespace BookStore.Controllers
 
         // GET: /Books/CategoryMenu
         [ChildActionOnly]
-
         public ActionResult CategoryMenu()
         {
             var categories = _context.Categories.ToList();

@@ -9,12 +9,11 @@
     @foreach (var book in Model.Books)
     {
         <li>
-
-
             <a href="@Url.Action("Details",
                          new { id = book.BookId })">
-                <img src='/Images/@book.ImagePath' width="250" height="180" /><br />
-                <span>@book.Name</span>
+                <img src='/Images/@book.ImagePath' width="150" height="200"/><br />
+                <span>@book.Author</span><br/>
+                <span>@book.Name </span>
             </a>
 
         </li>
