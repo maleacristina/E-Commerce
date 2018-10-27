@@ -46,7 +46,7 @@ namespace BookStore.Controllers
             return RedirectToAction("Index");
         }
 
-        //AJAX: /ShoppingCart/RemoveFromCArt/5
+        //AJAX: /ShoppingCart/RemoveFromCart/5
         [HttpPost]
         public ActionResult RemoveFromCart(int id)
         {
