@@ -1,0 +1,83 @@
+﻿@model BookStore.ViewModels.ShoppingCartViewModel
+
+@{
+    ViewBag.Title = "title";
+    //Layout = "_Layout";
+}
+
+<script src="/Scripts/jquery-3.2.1.min.js"
+        type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        // Document.ready -> link up remove event handler
+        $(".RemoveLink").click(function () {
+            // Get the id from the link
+            var recordToDelete = $(this).attr("data-id");
+            if (recordToDelete != '') {
+                // Perform the ajax post
+                $.post("/ShoppingCart/RemoveFromCart", { "id": recordToDelete },
+
+                    function (data) {
+                        // Successful requests get here
+                        // Update the page elements
+                        if (data.ItemCount == 0) {
+                            $('#row-' + data.DeleteId).fadeOut('slow');
+                        } else {
+                            $('#item-count-' + data.DeleteId).text(data.ItemCount);
+                        }
+                        $('#cart-total').text(data.CartTotal);
+                        $('#cart-status').text('Cart (' + data.CartCount + ')');
+                    });
+            }
+        });
+    });
+</script>
+<div class="shopping-cart">
+
+
+
+    <table class="table table-responsive">
+        <caption>Cosul de cumparaturi contine:</caption>
+        <tr>
+            <th>Cake Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model.CartItems)
+        {
+            <tr id="row-@item.RecordId">
+                <td>
+                    @item.Book.Name
+                </td>
+                <td>
+                    @item.Book.Price lei
+                </td>
+                <td id="item-count-@item.RecordId">
+                    @item.Cantitate
+                </td>
+                <td>
+                    <a href="#" class="RemoveLink" data-id="@item.RecordId">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+                </td>
+            </tr>
+        }
+        <tr>
+            <td>
+                Total
+            </td>
+            <td id="cart-total">
+                @Model.CartTotal lei
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </table>
+
+
+</div>
+<p class="button-checkout">
+    @Html.ActionLink("Finalizare comanda ", "AddressAndPayment", "Checkout")
+</p>

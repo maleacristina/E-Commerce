@@ -191,8 +191,10 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BooksController.cs" />
+    <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -200,14 +202,35 @@
     <Compile Include="Migrations\201810251923490_AddBookAndCategoryModel.Designer.cs">
       <DependentUpon>201810251923490_AddBookAndCategoryModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810271147279_AddOrderAndOrderDetailModels.cs" />
+    <Compile Include="Migrations\201810271147279_AddOrderAndOrderDetailModels.Designer.cs">
+      <DependentUpon>201810271147279_AddOrderAndOrderDetailModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810271220515_AddCartModel.cs" />
+    <Compile Include="Migrations\201810271220515_AddCartModel.Designer.cs">
+      <DependentUpon>201810271220515_AddCartModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810271312243_AddCityAndCounyModel.cs" />
+    <Compile Include="Migrations\201810271312243_AddCityAndCounyModel.Designer.cs">
+      <DependentUpon>201810271312243_AddCityAndCounyModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\City.cs" />
+    <Compile Include="Models\County.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetail.cs" />
+    <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\OrderFormViewModel.cs" />
+    <Compile Include="ViewModels\ShoppingCartRemoveViewModel.cs" />
+    <Compile Include="ViewModels\ShoppingCartViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -268,6 +291,10 @@
     <Content Include="Views\Books\Browse.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Books\CategoryMenu.cshtml" />
+    <Content Include="Views\ShoppingCart\Index.cshtml" />
+    <Content Include="Views\ShoppingCart\CartSummary.cshtml" />
+    <Content Include="Views\Checkout\AddressAndPayment.cshtml" />
+    <Content Include="Views\Checkout\Complete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -288,6 +315,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201810251923490_AddBookAndCategoryModel.resx">
       <DependentUpon>201810251923490_AddBookAndCategoryModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810271147279_AddOrderAndOrderDetailModels.resx">
+      <DependentUpon>201810271147279_AddOrderAndOrderDetailModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810271220515_AddCartModel.resx">
+      <DependentUpon>201810271220515_AddCartModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810271312243_AddCityAndCounyModel.resx">
+      <DependentUpon>201810271312243_AddCityAndCounyModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
