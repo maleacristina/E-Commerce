@@ -86,6 +86,9 @@ h6,
     margin-left: 40px;
     margin-top: 50px;
 }
+/*#cart-total {
+    font-weight: bold;
+}*/
 
 .display-book {
     list-style: none;
@@ -137,6 +140,15 @@ h6,
 .shopping-cart .table {
     margin-top: -400px;
 }
+.shopping-cart #cart-total {
+    font-weight: bold;
+    font-size: 20px;
+}
+.shopping-cart .total-style {
+    font-weight: bold;
+    font-size: 20px;
+}
+
 
 .caption-title {
     font-size: 20px;
