@@ -31,7 +31,7 @@ namespace BookStore.Controllers
             return View(viewModel);
         }
 
-        //GET: /Cakes/AddToCart/5
+        //GET: /Books/AddToCart/5
         [Authorize]
         public ActionResult AddToCart(int id)
         {

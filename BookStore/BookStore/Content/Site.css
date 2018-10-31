@@ -43,15 +43,18 @@ h6,
 
 .navbar-inverse {
     background-color: #16160e;
+   
 }
 
     .navbar-inverse .navbar-nav > li > a {
         color: #fff;
+        
     }
 
     .navbar-inverse .navbar-brand {
         font-size: 25px;
         color: white;
+       
     }
 
         .navbar-inverse .navbar-brand > a {
@@ -97,6 +100,7 @@ h6,
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
+    margin-top: 130px;
 }
 
     .display-book > li {
@@ -106,7 +110,7 @@ h6,
     }
 
 .dl-horizontal {
-    margin-top: 200px;
+    margin-top: 150px;
 }
 
     .dl-horizontal .image {
@@ -130,7 +134,7 @@ h6,
     }
 
 .shopping-cart {
-    margin-top: 450px;
+    margin-top: 550px;
 }
 
 .title-cos {
