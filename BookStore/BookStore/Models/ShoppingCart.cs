@@ -157,7 +157,7 @@ namespace BookStore.Models
             }
 
             order.Total = orderTotal;
-
+            _context.Orders.Add(order);
             _context.SaveChanges();
             EmptyCart();
 

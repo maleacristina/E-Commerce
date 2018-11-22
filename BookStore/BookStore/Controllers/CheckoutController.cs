@@ -16,7 +16,7 @@ namespace BookStore.Controllers
             _context = new ApplicationDbContext();
         }
 
-        const string PromoCode = "FREE";
+        //const string PromoCode = "FREE";
         // GET: Checkout/AddressAndPayment
         public ActionResult AddressAndPayment()
         {
