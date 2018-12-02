@@ -17,8 +17,16 @@ namespace BookStore.Controllers
             _context = new ApplicationDbContext();
         }
         // GET: Books
-        public ActionResult Index()
+        public ActionResult Index(string searchBy, string search)
         {
+            if (searchBy == "Name")
+            {
+                return View(_context.Books.Where(x => x.Name == search || search == null).ToList());
+            }
+            else
+            {
+                return View(_context.Books.Where(x => x.Author.StartsWith(search) || search == null).ToList());
+            }
             //var book = new Book()
             //{
             //    Name = "Baltagul"

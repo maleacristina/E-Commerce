@@ -1,0 +1,73 @@
+﻿@using BookStore.Models
+@model IEnumerable<BookStore.Models.Book>
+
+@{
+    ViewBag.Title = "title";
+    // Layout = "_Layout";
+}
+
+
+@Html.ActionLink("Add book", "Create", "Admin", null, new { @class = "btn btn-success" })
+<table class="table table-responsive">
+    <br />
+    <tr>
+        <th>Book Name</th>
+        <th>Author</th>
+        <th>Category</th>
+        <th>Publishing house</th>
+        <th>Description</th>
+        <th>Available quantity</th>
+        <th>Image path</th>
+        <th>Price</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr id="row-@item.BookId">
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.Author
+            </td>
+            <td>
+                @item.CategoryId
+            </td>
+            <td>
+                @item.PublishingHouse
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.Description)
+            </td>
+            <td>
+                @item.AvailableQuantity
+            </td>
+            <td>
+                @item.ImagePath
+            </td>
+            <td>
+                @item.Price lei
+            </td>
+
+            @*<td id="item-count-@item.RecordId">
+                    @item.Cantitate
+                </td>*@
+            <td>
+                @*<a href="#" class="EditLink" data-id="@item.BookId">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </a>*@
+                @Html.ActionLink(" ","Edit", new {id = item.BookId}, new { @class = "glyphicon glyphicon-edit" } )
+
+            </td>
+            <td>
+                @*<a href="#" class="DeleteLink" data-id="@item.BookId">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </a>*@
+                @Html.ActionLink(" ","Delete", new {id = item.BookId}, new { @class = "glyphicon glyphicon-trash" } )
+            </td>
+        </tr>
+    }
+
+
+</table>

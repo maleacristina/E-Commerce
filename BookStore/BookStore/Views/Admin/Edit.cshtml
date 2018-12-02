@@ -1,0 +1,61 @@
+﻿@model BookStore.ViewModels.NewBook
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<br>
+<br>
+<br>
+<h2>Edit</h2>
+
+@using (Html.BeginForm("Edit", "Admin", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model =>model.Book.BookId)
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Book.Name)
+        @Html.TextBoxFor(model => model.Book.Name, new { @class = "form-control" })
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Book.Author)
+        @Html.TextBoxFor(model => model.Book.Author, new { @class = "form-control" })
+    </div>
+    @*<div class="display-field">
+            @Html.DisplayNameFor(model => model.Category)
+            @Html.TextBoxFor(model => model.Category, new {@class = "form-control"})
+        </div>*@
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Book.Category)
+        @Html.DropDownListFor(model => model.Book.CategoryId, new SelectList(Model.Categories, "Id", "Nume"), "Select Role Type", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Book.CategoryId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayNameFor(model => model.Book.PublishingHouse)
+        @Html.TextBoxFor(model => model.Book.PublishingHouse, new { @class = "form-control" })
+    </div>
+    <div class="display-field">
+        @Html.DisplayNameFor(model => model.Book.Description)
+        @Html.TextBoxFor(model => model.Book.Description, new { @class = "form-control" })
+    </div>
+    <div class="display-field">
+        @Html.DisplayNameFor(model => model.Book.AvailableQuantity)
+        @Html.TextBoxFor(model => model.Book.AvailableQuantity, new { @class = "form-control" })
+    </div>
+    <div class="display-field">
+        @Html.DisplayNameFor(model => model.Book.ImagePath)
+        @Html.TextBoxFor(model => model.Book.ImagePath, new { @class = "form-control" })
+    </div>
+
+
+    <div class="display-field">
+        @Html.DisplayNameFor(model => model.Book.Price)
+        @Html.TextBoxFor(model => model.Book.Price, new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-success">Save</button>
+
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

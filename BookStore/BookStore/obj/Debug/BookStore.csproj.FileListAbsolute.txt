@@ -114,12 +114,12 @@ C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\Microsoft.AI.Ser
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\bin\Microsoft.AI.Web.xml
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\obj\Debug\BookStore.Migrations.AddBookAndCategoryModel.resources
+C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\obj\Debug\BookStore.Migrations.AddOrderAndOrderDetailModels.resources
+C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\obj\Debug\BookStore.Migrations.AddCartModel.resources
+C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\obj\Debug\BookStore.Migrations.AddCityAndCounyModel.resources
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\obj\Debug\BookStore.csproj.GenerateResource.cache
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\obj\Debug\BookStore.csproj.CoreCompileInputs.cache
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\obj\Debug\BookStore.csproj.CopyComplete
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\obj\Debug\BookStore.dll
 C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\obj\Debug\BookStore.pdb
-C:\Users\Asus\Desktop\GitHub\E-commerce\BookStore\BookStore\obj\Debug\BookStore.csprojResolveAssemblyReference.cache
-C:\Users\Asus\Desktop\GitHub\E-commerce\BookStore\BookStore\obj\Debug\BookStore.Migrations.AddOrderAndOrderDetailModels.resources
-C:\Users\Asus\Desktop\GitHub\E-commerce\BookStore\BookStore\obj\Debug\BookStore.Migrations.AddCartModel.resources
-C:\Users\Asus\Desktop\GitHub\E-commerce\BookStore\BookStore\obj\Debug\BookStore.Migrations.AddCityAndCounyModel.resources
+C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\BookStore\obj\Debug\BookStore.csprojResolveAssemblyReference.cache
