@@ -38,7 +38,7 @@ namespace BookStore.Controllers
         //GET: /Books/AddToCart/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(NewBook book)
+        public ActionResult Create(Book book)
         {
             //if (ModelState.IsValid)
             //{
@@ -46,23 +46,23 @@ namespace BookStore.Controllers
             //    _context.SaveChanges();
             //    return RedirectToAction("Index");
             //}
-            if (!ModelState.IsValid)
-            {
-                book.Categories = _context.Categories.ToList();
+            //if (!ModelState.IsValid)
+            //{
+            //     book.Categories = _context.Categories.ToList();
 
-                return View("Create", book);
-            }
+            //    return View("Create", book);
+            //}
 
             var newBook = new Book
             {
-                Name = book.Book.Name,
-                Author = book.Book.Author,
-                CategoryId = book.Book.CategoryId,
-                PublishingHouse = book.Book.PublishingHouse,
-                Description = book.Book.Description,
-                AvailableQuantity = book.Book.AvailableQuantity,
-                ImagePath = book.Book.ImagePath,
-                Price = book.Book.Price
+                Name = book.Name,
+                Author = book.Author,
+                CategoryId = book.CategoryId,
+                PublishingHouse = book.PublishingHouse,
+                Description = book.Description,
+                AvailableQuantity = book.AvailableQuantity,
+                ImagePath = book.ImagePath,
+                Price = book.Price
             };
 
             _context.Books.Add(newBook);
@@ -86,25 +86,33 @@ namespace BookStore.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(NewBook book)
+        public ActionResult Edit(Book book)
         {
             if (ModelState.IsValid)
             {
-                var newBook = new Book
-                {
-                    Name = book.Book.Name,
-                    Author = book.Book.Author,
-                    CategoryId = book.Book.CategoryId,
-                    PublishingHouse = book.Book.PublishingHouse,
-                    Description = book.Book.Description,
-                    AvailableQuantity = book.Book.AvailableQuantity,
-                    ImagePath = book.Book.ImagePath,
-                    Price = book.Book.Price
-                };
-                _context.Books.Add(newBook);
+                //var newBook = new Book
+                //{
+                //    Name = book.Name,
+                //    Author = book.Author,
+                //    CategoryId = book.CategoryId,
+                //    PublishingHouse = book.PublishingHouse,
+                //    Description = book.Description,
+                //    AvailableQuantity = book.AvailableQuantity,
+                //    ImagePath = book.ImagePath,
+                //    Price = book.Price
+                //};
+                var currentBook = _context.Books.Single(c => c.BookId == book.BookId);
+                currentBook.Name = book.Name;
+                currentBook.Author = book.Author;
+                currentBook.CategoryId = book.CategoryId;
+                currentBook.PublishingHouse = book.PublishingHouse;
+                currentBook.Description = book.Description;
+                currentBook.AvailableQuantity = book.AvailableQuantity;
+                currentBook.ImagePath = book.ImagePath;
+                currentBook.Price = book.Price;
                 _context.SaveChanges();
 
-                return View("Index");
+                return RedirectToAction("Index");
             }
 
             return View("Edit");

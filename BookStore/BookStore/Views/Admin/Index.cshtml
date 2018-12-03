@@ -38,7 +38,10 @@
                 @item.PublishingHouse
             </td>
             <td>
-                @Html.DisplayNameFor(model => model.Description)
+                <p style='height: 3.3em; line-height: 12px; overflow: hidden; text-overflow: ellipsis'> @item.Description
+                </p> 
+            <a onclick='arata(event)'>Show all</a>
+            
             </td>
             <td>
                 @item.AvailableQuantity
@@ -71,3 +74,19 @@
 
 
 </table>
+<script>
+    var arata = function (e) {
+        var td = $(e.target).parent();
+        var theP = $(td).find("p");
+        var isCollapsed = theP.data("collapsed");
+        if (typeof isCollapsed !== 'undefined' && isCollapsed === "true") {
+            $(theP).css({height: '3.3em'});
+            $(td).find("a").text("more");
+            $(theP).data("collapsed", "false");
+        } else {
+            $(theP).css({height: 'auto'});
+            $(td).find("a").text("less");
+            $(theP).data("collapsed", "true");
+        }
+    }
+</script>
