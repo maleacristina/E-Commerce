@@ -128,7 +128,9 @@ h6,
         margin-top: 15px;
         width: 450px;
     }
-
+    .dl-horizontal .stock {
+       margin: 15px 50px;
+    }
     .dl-horizontal .price {
         margin: 15px 50px;
     }

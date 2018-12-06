@@ -21,7 +21,7 @@ namespace BookStore.Controllers
         public ActionResult Index()
         {
 
-            return View(_context.Books.ToList());
+            return View(_context.Books.Include("Category").ToList());
         }
         [HttpGet]
         public ActionResult Create()

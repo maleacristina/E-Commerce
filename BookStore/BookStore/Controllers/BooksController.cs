@@ -8,7 +8,7 @@ using BookStore.Models;
 
 namespace BookStore.Controllers
 {
-    
+    [AllowAnonymous]
     public class BooksController : Controller
     {
         ApplicationDbContext _context;
@@ -65,8 +65,6 @@ namespace BookStore.Controllers
             var categories = _context.Categories.ToList();
             //if (User.IsInRole("Admin"))
                
-
-            
             return PartialView(categories);
         }
     }
