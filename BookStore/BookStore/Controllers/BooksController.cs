@@ -8,6 +8,7 @@ using BookStore.Models;
 
 namespace BookStore.Controllers
 {
+    
     public class BooksController : Controller
     {
         ApplicationDbContext _context;
@@ -53,7 +54,7 @@ namespace BookStore.Controllers
 
         public ActionResult Browse(string category)
         {
-            var categoryModel = _context.Categories.Include("Books").Single(a => a.Nume == category);
+            var categoryModel = _context.Categories.Include("Books").SingleOrDefault(a => a.Nume == category);
             return View(categoryModel);
         }
 
@@ -62,6 +63,10 @@ namespace BookStore.Controllers
         public ActionResult CategoryMenu()
         {
             var categories = _context.Categories.ToList();
+            //if (User.IsInRole("Admin"))
+               
+
+            
             return PartialView(categories);
         }
     }

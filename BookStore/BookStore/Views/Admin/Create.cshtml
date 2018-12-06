@@ -9,7 +9,14 @@
 <br />
 <br />
 <br />
-<br/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 @using (Html.BeginForm("Create", "Admin", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
@@ -29,7 +36,7 @@
         </div>*@
     <div class="display-label">
         @Html.DisplayNameFor(model => model.Book.Category)
-        @Html.DropDownListFor(model => model.Book.CategoryId, new SelectList(Model.Categories, "Id", "Nume"), "Select Role Type", new {@class = "form-control"})
+        @Html.DropDownListFor(model => model.Book.CategoryId, new SelectList(Model.Categories, "Id", "Nume"), "Select Role Type", new { @class = "form-control" })
         @Html.ValidationMessageFor(model => model.Book.CategoryId)
     </div>
     <div class="display-field">
@@ -54,7 +61,7 @@
         @Html.DisplayNameFor(model => model.Book.Price)
         @Html.TextBoxFor(model => model.Book.Price, new { @class = "form-control" })
     </div>
-
+    <br/>
     <button type="submit" class="btn btn-success">Add book</button>
 }
 @*@Html.ActionLink("Add book", "Index", "Admin",null, new { @class = "btn btn-success" })*@

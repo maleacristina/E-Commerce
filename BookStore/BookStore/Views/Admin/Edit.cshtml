@@ -7,12 +7,21 @@
 <br>
 <br>
 <br>
-<h2>Edit</h2>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h4><strong>Edit</strong></h4>
 
 @using (Html.BeginForm("Edit", "Admin", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
-    @Html.HiddenFor(model =>model.Book.BookId)
+    @Html.HiddenFor(model => model.Book.BookId)
     <div class="display-label">
         @Html.DisplayNameFor(model => model.Book.Name)
         @Html.TextBoxFor(model => model.Book.Name, new { @class = "form-control" })
@@ -52,10 +61,10 @@
         @Html.DisplayNameFor(model => model.Book.Price)
         @Html.TextBoxFor(model => model.Book.Price, new { @class = "form-control" })
     </div>
+    <br />
     <button type="submit" class="btn btn-success">Save</button>
-
 }
-
+<br />
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>

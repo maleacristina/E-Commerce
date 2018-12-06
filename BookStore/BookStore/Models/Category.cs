@@ -15,7 +15,7 @@ namespace BookStore.Models
         [StringLength(255)]
         public string Nume { get; set; }
 
-        //[Required]
-      //  public List<Book> Books { get; set; }
+        [Required]
+        public List<Book> Books { get; set; }
     }
 }

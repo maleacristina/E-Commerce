@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using WebGrease.Css
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -25,7 +26,8 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("Home", "Index", "Books")</li>
+                @if ((User.IsInRole("Admin")) == false) { 
+            <li>@Html.ActionLink("Home", "Index", "Books")</li>}
 
             </ul>
             @Html.Partial("_LoginPartial")
@@ -34,8 +36,11 @@
 </div>
 <br />
 <br />
+@if ((User.IsInRole("Admin")) == false)
+{
+    Html.RenderAction("CategoryMenu", "Books");
+}
 
-@{Html.RenderAction("CategoryMenu", "Books");}
 <div id="main">
     @RenderBody()
 </div>

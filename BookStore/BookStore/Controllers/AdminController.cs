@@ -9,6 +9,7 @@ using BookStore.ViewModels;
 
 namespace BookStore.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         ApplicationDbContext _context;
@@ -35,7 +36,7 @@ namespace BookStore.Controllers
             return View("Create", viewModel);
         }
 
-        //GET: /Books/AddToCart/5
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Book book)

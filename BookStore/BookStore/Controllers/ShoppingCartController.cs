@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -41,6 +43,48 @@ namespace BookStore.Controllers
             //Add it to the shopping cart
             var cart = ShoppingCart.GetCart(this.HttpContext);
 
+
+            //if (cartItem != null)
+            //{
+            //    if (cartItem.Cantitate > 1)
+            //    {
+            //        cartItem.Cantitate--;
+            //        itemCount = cartItem.Cantitate;
+            //    }
+            //    else
+            //    {
+            //        _context.Carts.Remove(cartItem);
+            //    }
+            //    //Save changes
+            //    _context.SaveChanges();
+            //}
+
+
+            var quantity = _context.Books.Where(a => a.BookId == id)
+                .Select(a => a.AvailableQuantity).First();
+
+
+            var entityItem = _context.Books.FirstOrDefault(s => s.BookId == id);
+            if (entityItem != null)
+            {
+               
+                entityItem.AvailableQuantity--;
+
+                _context.Books.AddOrUpdate(entityItem);
+                _context.SaveChanges();
+                //    db.Entry(entityItem).State = EntityState.Modified;
+                //    db.SaveChanges();
+            }
+
+
+
+
+            //int itemCount = 0;
+
+            //if (quantity != null)
+            //{
+            //    quantity.
+            //}
             cart.AddToCart(addedBook);
 
             return RedirectToAction("Index");
@@ -81,7 +125,10 @@ namespace BookStore.Controllers
             var cart = ShoppingCart.GetCart(this.HttpContext);
 
             ViewData["CartCount"] = cart.GetCount();
+            
+            
             return PartialView("CartSummary");
+            
         }
     }
 

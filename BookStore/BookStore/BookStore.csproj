@@ -215,6 +215,14 @@
     <Compile Include="Migrations\201810271312243_AddCityAndCounyModel.Designer.cs">
       <DependentUpon>201810271312243_AddCityAndCounyModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812051703151_SeedUsers.cs" />
+    <Compile Include="Migrations\201812051703151_SeedUsers.Designer.cs">
+      <DependentUpon>201812051703151_SeedUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812052115596_CategoryModel.cs" />
+    <Compile Include="Migrations\201812052115596_CategoryModel.Designer.cs">
+      <DependentUpon>201812052115596_CategoryModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Book.cs" />
@@ -329,6 +337,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810271312243_AddCityAndCounyModel.resx">
       <DependentUpon>201810271312243_AddCityAndCounyModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812051703151_SeedUsers.resx">
+      <DependentUpon>201812051703151_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812052115596_CategoryModel.resx">
+      <DependentUpon>201812052115596_CategoryModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
