@@ -1,0 +1,17 @@
+﻿@*@model System.Collections.Generic.List<BookStore.Models.Book>
+
+
+    <div class="space">
+        @using (Html.BeginForm("PriceMenu", "Books", FormMethod.Get))
+        {
+            <b> Pret:</b>
+            <br />
+            @Html.RadioButton("searchBy", "Name", true) <text>10 - 50</text>
+            <br />
+            @Html.RadioButton("searchBy", "Author") <text>50 - 100</text>
+            <br />
+            @Html.RadioButton("searchBy", "Author") <text>100 - 200</text>
+            <br />
+            @Html.RadioButton("searchBy", "Author") <text>Peste 200</text>
+        }
+    </div>*@

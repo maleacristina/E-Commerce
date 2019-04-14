@@ -1,5 +1,9 @@
 ﻿@model IEnumerable<BookStore.Models.Book>
 
+@*@model System.Collections.Generic.List<BookStore.Models.Book>*@
+
+<link href="~/Scripts/jquery-ui.css" rel="stylesheet" />
+
 @{
     ViewBag.Title = "Home Page";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -9,19 +13,60 @@
 <br />
 <br />
 <br />
-<div>
-    @using (Html.BeginForm("Index", "Books", FormMethod.Get))
+@*<div>
+        @using (Html.BeginForm("Index", "Books", FormMethod.Get))
+            {
+            <b> Search by:</b>
+                 @Html.RadioButton("searchBy", "Name", true) <text>Book</text>
+                 @Html.RadioButton("searchBy", "Author") <text>Author</text>
+                 <br/>
+                 @Html.TextBox("search") <input type = "submit" value = "Search" class="btn"/>
+            }
+        @using (Html.BeginForm("Index", "Books", FormMethod.Get))
         {
-        <b> Search by:</b>
-             @Html.RadioButton("searchBy", "Name", true) <text>Book</text>
-             @Html.RadioButton("searchBy", "Author") <text>Author</text>
-             <br/>
-             @Html.TextBox("search") <input type = "submit" value = "Search" class="btn"/>
-         }
-</div>
+
+
+            @Html.AntiForgeryToken()
+        <div class="form-horizontal">
+            <hr />
+            @foreach (var book in Model)
+        {
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => book.BookId)
+
+            <div class="form-group">
+                @Html.LabelFor(model => book.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.HiddenFor(model => book.BookId)
+                    @Html.EditorFor(model => book.Name, new { htmlAttributes = new { @class = "form-control autocomplete"} })
+                    @Html.ValidationMessageFor(model => book.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+    }
+
+        </div>
+
+        }
+
+
+    </div>*@
+
+
+@*<input class="autocomplete" type="text" />*@
+
+
+
+@using (@Html.BeginForm())
+{
+    <b>Name: </b>
+    @Html.TextBox("searchTerm", null, new { id = "autocomplete" })
+    <input type="submit" value="Search" />
+}
+
 @if (Model.Count() == 0)
 {
-<p>Sorry, there are no products according to the selected filters.</p>
+    <p>Sorry, there are no products according to the selected filters.</p>
 }
 else
 {
@@ -40,4 +85,34 @@ else
 
         }
     </ul>
+}
+
+
+
+@section Scripts {
+
+    <script src="~/Scripts/jquery-ui.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('#autocomplete').autocomplete({
+                //source: books
+                source: '@Url.Action("getbooks", "Books")'
+                //select: function (event, ui) {
+                //    //set tagids to save
+                //    //alert(ui.item.id);
+                //    $("#BookId").val(ui.item.id);
+
+
+                //    //Tags for display
+                //    this.value = ui.item.value;
+                //    return false;
+                //}
+            });
+
+        });
+    </script>
+    @Scripts.Render("~/bundles/jqueryval")
 }

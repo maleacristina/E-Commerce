@@ -1,0 +1,16 @@
+﻿@model IEnumerable<BookStore.Models.Book>
+
+@{
+    /**/
+
+    ViewBag.Title = "Sort";
+}
+
+
+
+
+    
+@using (Html.BeginForm("Index", "Books", FormMethod.Get))
+{
+    @Html.ActionLink("Price", "Sort", new {sortOrder = ViewBag.PriceParam})
+}

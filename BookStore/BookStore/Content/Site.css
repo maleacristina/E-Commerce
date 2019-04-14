@@ -75,6 +75,9 @@ h6,
 .box-category > ul {
     list-style: none;
 }
+.box info category .box-content .box-category .space {
+    margin-left: 40px;
+}
 
 .box-content {
     display: block;

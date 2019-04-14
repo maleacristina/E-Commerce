@@ -1,0 +1,2 @@
+user: admin@yahoo.com 
+pass: Admin12.
