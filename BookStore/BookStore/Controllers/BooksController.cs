@@ -1,69 +1,86 @@
 ﻿ using System;
 using System.Collections.Generic;
-using System.Linq;
+ using System.IO;
+ using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using BookStore.Models;
+ using BookStore.Repository;
+ using Lucene.Search;
 
-namespace BookStore.Controllers
+
+ namespace BookStore.Controllers
 {
     [AllowAnonymous]
     public class BooksController : Controller
     {
         private ApplicationDbContext _context;
+        private ILuceneRepository luceneReporitory;
 
         public BooksController()
         {
             _context = new ApplicationDbContext();
+            luceneReporitory = new LuceneRepository();
         }
         // GET: Books
-        //public ActionResult Index(string searchBy, string search)
-        //{
-        //    if (searchBy == "Name")
-        //    {
-        //        return View(_context.Books.Where(x => x.Name.StartsWith(search) || search == null).ToList());
-        //    }
-        //    else
-        //    {
-        //        return View(_context.Books.Where(x => x.Author.StartsWith(search) || search == null).ToList());
-        //    }
+        public ActionResult Search(string searchBy, string search)
+        {
+            var allBooks = _context.Books.ToList();
+            var luceneResult = luceneReporitory.Search(search);
+
+            IList<Book> books = new List<Book>();
+            foreach (var booksFromLucene in luceneResult.Hits)
+            {
+                Book book = ((List<Book>) allBooks).Find(b => b.BookId == booksFromLucene.BookId);
+                books.Add(book);
+            }
+
+            return View("Index", books);
 
 
-        //    //if (price >= 10 || price <= 20)
-        //    //    return View(_context.Books.Where(x => x.Price == price).ToList());
-        //    //return View(_context.Books.ToList());
-        //}
+           // if (searchBy == "Name")
+            //{
+                //return View(_context.Books.Where(x => x.Name.StartsWith(search) || search == null).ToList());
+              //  return View("Index");
+            //}
+           //else
+            //{
+                //return View(_context.Books.Where(x => x.Author.StartsWith(search) || search == null).ToList());
+           //  return View("Index");
+            //}
+
+
+        }
 
         // GET: Books
-        public ActionResult Index()
+            public ActionResult Index()
         {
             var books = _context.Books.ToList();
             return View(books);
         }
 
-        [HttpPost]
-        public ActionResult Index(string searchTerm)
-        {
-            _context = new ApplicationDbContext();
-            List<Book> books;
-            if (string.IsNullOrEmpty(searchTerm))
-            {
-                books = _context.Books.ToList();
-            }
-            else
-            {
-                books = _context.Books
-                    .Where(s => s.Name.StartsWith(searchTerm)).ToList();
-            }
-            return View(books);
-        }
+        //[HttpPost]
+        //public ActionResult Index(string searchTerm)
+        //{
+        //    _context = new ApplicationDbContext();
+        //    List<Book> books;
+        //    if (string.IsNullOrEmpty(searchTerm))
+        //    {
+        //        books = _context.Books.ToList();
+        //    }
+        //    else
+        //    {
+        //        books = _context.Books
+        //            .Where(s => s.Name.StartsWith(searchTerm)).ToList();
+        //    }
+        //    return View(books);
+        //}
 
-        public ActionResult getbooks(string term)
-        {
-            return Json(_context.Books.Where(c => c.Name.StartsWith(term)).Select(a => new { label = a.Name, id = a.BookId }), JsonRequestBehavior.AllowGet);
-            //return Json(db.Countries.Where(c => c.Name.StartsWith(term)).Select(a => new { label = a.Name }), JsonRequestBehavior.AllowGet);
-        }
+        //public ActionResult getbooks(string term)
+        //{
+        //    return Json(_context.Books.Where(c => c.Name.StartsWith(term)).Select(a => new { label = a.Name, id = a.BookId }), JsonRequestBehavior.AllowGet);
+            
+        //}
 
         public ActionResult Sort(string sortOrder)
         {
@@ -116,7 +133,7 @@ namespace BookStore.Controllers
             return PartialView(categories);
         }
 
-  /*      [ChildActionOnly]*/
+        /*      [ChildActionOnly]*/
         //public ActionResult PriceMenu()
         //{
         //    var prices = _context.Books.Select(x => x.Price).ToList();

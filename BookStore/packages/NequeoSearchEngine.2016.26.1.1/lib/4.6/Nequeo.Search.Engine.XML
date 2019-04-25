@@ -1,0 +1,1207 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nequeo.Search.Engine</name>
+    </assembly>
+    <members>
+        <member name="T:Nequeo.Search.Engine.Analyzer.SimpleBytesAttributeFactory">
+            <summary>
+            Simple bytes attribute factory.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Analyzer.SimpleBytesAttributeFactory.CreateAttributeInstance``1">
+            <summary>
+            Create attribute instance.
+            </summary>
+            <typeparam name="T">The attrubute type.</typeparam>
+            <returns>returns an for the supplied interface class.</returns>
+        </member>
+        <member name="T:Nequeo.Search.Engine.Analyzer.SimpleAnalyzer">
+            <summary>
+            Simple analyzer.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Analyzer.SimpleAnalyzer.CreateComponents(System.String,System.IO.TextReader)">
+            <summary>
+            Create the token stream components.
+            </summary>
+            <param name="fieldName">The field name.</param>
+            <param name="reader">The text reader stream.</param>
+            <returns>The token stream components.</returns>
+        </member>
+        <member name="T:Nequeo.Search.Engine.Analyzer.ReadState">
+            <summary>
+            Read state.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Search.Engine.Analyzer.SimpleTokenizer">
+            <summary>
+            Simple tokenizer.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Analyzer.SimpleTokenizer.#ctor(System.IO.TextReader)">
+            <summary>
+            Simple tokenizer.
+            </summary>
+            <param name="input">The current text reader stream.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Analyzer.SimpleTokenizer.#ctor(Lucene.Net.Util.AttributeSource.AttributeFactory,System.IO.TextReader)">
+            <summary>
+            Simple tokenizer.
+            </summary>
+            <param name="input">The current text reader stream.</param>
+            <param name="factory">Set the attribute factory.</param>
+        </member>
+        <member name="F:Nequeo.Search.Engine.Analyzer.SimpleTokenizer.WHITESPACE">
+            <summary>
+            Acts Similar to WhitespaceTokenizer </summary>
+        </member>
+        <member name="F:Nequeo.Search.Engine.Analyzer.SimpleTokenizer.KEYWORD">
+            <summary>
+            Acts Similar to KeywordTokenizer.
+            TODO: Keyword returns an "empty" token for an empty reader...
+            </summary>
+        </member>
+        <member name="F:Nequeo.Search.Engine.Analyzer.SimpleTokenizer.SIMPLE">
+            <summary>
+            Acts like LetterTokenizer. </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Analyzer.SimpleTokenizer.IncrementToken">
+            <summary>
+            Consumers use this method to advance the stream to
+            the next token. Implementing classes must implement this method and update
+            the appropriate with the attributes of the next
+            token.
+            The producer must make no assumptions about the attributes after the method
+            has been returned: the caller may arbitrarily change it. If the producer
+            needs to preserve the state for subsequent calls, it can use
+            to create a copy of the current attribute state
+            this method is called for every token of a document, so an efficient
+            implementation is crucial for good performance. To avoid calls to,
+            references to all that this stream uses should be
+            retrieved during instantiation.
+            To ensure that filters and consumers know which attributes are available,
+            the attributes must be added during instantiation. Filters and consumers
+            are not required to check for availability of attributes.
+            </summary>
+            <returns> false for end of stream; true otherwise </returns>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Analyzer.SimpleTokenizer.ReadCodePoint">
+            <summary>
+            Read code point.
+            </summary>
+            <returns>The code point.</returns>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Analyzer.SimpleTokenizer.ReadChar">
+            <summary>
+            Read character.
+            </summary>
+            <returns>The character read.</returns>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Analyzer.SimpleTokenizer.IsTokenChar(System.Int32)">
+            <summary>
+            Is token character.
+            </summary>
+            <param name="c">The character.</param>
+            <returns>True if is token character.</returns>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Analyzer.SimpleTokenizer.Normalize(System.Int32)">
+            <summary>
+            Normalise the character.
+            </summary>
+            <param name="c">The character.</param>
+            <returns>Normalised character.</returns>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Analyzer.SimpleTokenizer.Normalize(System.Char)">
+            <summary>
+            Normalise the character.
+            </summary>
+            <param name="c">The character.</param>
+            <returns>Normalised character.</returns>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Analyzer.SimpleTokenizer.Reset">
+            <summary>
+            Reset all values.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Analyzer.SimpleTokenizer.Dispose">
+            <summary>
+            Dispose of the object.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Analyzer.SimpleTokenizer.SetReaderTestPoint">
+            <summary>
+            Set the reader test point.
+            </summary>
+            <returns>True if set.</returns>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Analyzer.SimpleTokenizer.End">
+            <summary>
+            End the read operation.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.Analyzer.SimpleTokenizer.EnableChecks">
+            <summary>
+            Toggle consumer workflow checking: if your test consumes tokenstreams normally you
+            should leave this enabled.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Search.Engine.Analyzer.SimpleUnicodeTermAttribute">
+            <summary>
+            Simple unicode term attribute.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Analyzer.SimpleUnicodeTermAttribute.FillBytesRef">
+            <summary>
+            Override fill bytes by refernce.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Analyzer.SimpleUnicodeTermAttribute.EndOffset">
+            <summary>
+            Get the end offset.
+            </summary>
+            <returns>Return the end offset.</returns>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Analyzer.SimpleUnicodeTermAttribute.SetOffset(System.Int32,System.Int32)">
+            <summary>
+            Set the offset.
+            </summary>
+            <param name="startOffset">Start offset.</param>
+            <param name="endOffset">End offset.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Analyzer.SimpleUnicodeTermAttribute.StartOffset">
+            <summary>
+            Get the start offset.
+            </summary>
+            <returns>Return the start offset.</returns>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Analyzer.SimpleUnicodeTermAttribute.Clear">
+            <summary>
+            Reset the offset.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Analyzer.SimpleUnicodeTermAttribute.Equals(System.Object)">
+            <summary>
+            Eqauls override.
+            </summary>
+            <param name="other">The object to compare.</param>
+            <returns>True if equal.</returns>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Analyzer.SimpleUnicodeTermAttribute.GetHashCode">
+            <summary>
+            Get the hash code.
+            </summary>
+            <returns>The code.</returns>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Analyzer.SimpleUnicodeTermAttribute.CopyTo(Lucene.Net.Util.Attribute)">
+            <summary>
+            Copy the offset.
+            </summary>
+            <param name="target">The target.</param>
+        </member>
+        <member name="P:Nequeo.Search.Engine.Analyzer.SimpleUnicodeTermAttribute.PositionIncrement">
+            <summary>
+            Gets or sets the position incrememt.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Search.Engine.Analyzer.StandardAnalyzer">
+            <summary>
+            Standard analyzer.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Analyzer.StandardAnalyzer.#ctor(Lucene.Net.Analysis.Analyzer)">
+            <summary>
+            Standard analyzer.
+            </summary>
+            <param name="analyzer">The base analyzer.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Analyzer.StandardAnalyzer.GetWrappedAnalyzer(System.String)">
+            <summary>
+            Retrieves the wrapped Analyzer appropriate for analyzing the field with
+            the given name
+            </summary>
+            <param name="fieldName"> Name of the field which is to be analyzed </param>
+            <returns> Analyzer for the field with the given name.  Assumed to be non-null </returns>
+        </member>
+        <member name="T:Nequeo.Search.Engine.IndexProvider">
+            <summary>
+            Full-Text search engine index provider, used to create and manage documents.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.IndexProvider.#ctor">
+            <summary>
+            Full-Text search engine index provider, used to create and manage documents.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.IndexProvider.CreateIndex(System.IO.DirectoryInfo)">
+            <summary>
+            Create a new index store within the specified directory.
+            </summary>
+            <param name="directoryIndexInfo">The directory infomation where the index files are to be placed.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.IndexProvider.CreateMultiFacetIndex(System.IO.DirectoryInfo)">
+            <summary>
+            Create a new facet store within the specified directory.
+            </summary>
+            <param name="directoryFacetInfo">The directory infomation where the facet files are to be placed.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.IndexProvider.AddMultiFacetDocuments(System.IO.DirectoryInfo,System.IO.DirectoryInfo,Nequeo.Search.Engine.FacetData)">
+            <summary>
+            Add documents to the existing index.
+            </summary>
+            <param name="directoryIndexInfo">The directory infomation where the index files are located.</param>
+            <param name="directoryFacetInfo">The directory infomation where the facet files are to be placed.</param>
+            <param name="facetData">The complete facet information used to build the index information.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.IndexProvider.AddDocuments(System.IO.DirectoryInfo,System.IO.DirectoryInfo,Nequeo.Search.Engine.SupportedDocumentExtension)">
+            <summary>
+            Add documents to the existing index.
+            </summary>
+            <param name="directoryIndexInfo">The directory infomation where the index files are located.</param>
+            <param name="directoryInfo">The directory information where all the files that are to be added are located.</param>
+            <param name="documents">The supported documents search filter, used to indicate what files are to be added.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.IndexProvider.RemoveMultiFacetDocuments(System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String[],System.String[])">
+            <summary>
+            Remove facet documents from the existing index.
+            </summary>
+            <param name="directoryIndexInfo">The directory infomation where the index files are located.</param>
+            <param name="directoryFacetInfo">The directory infomation where the facet files are to be placed.</param>
+            <param name="textNames">The array of names for text data.</param>
+            <param name="filePaths">The array of full paths (without root 'C:\'. e.g. 'temp/http/index.html') for file documents.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.IndexProvider.RemoveDocuments(System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String[],Nequeo.Search.Engine.SupportedDocumentExtension)">
+            <summary>
+            Remove documents from the existing index.
+            </summary>
+            <param name="directoryIndexInfo">The directory infomation where the index files are located.</param>
+            <param name="directoryInfo">The top level relative directory information where all the files that are to be removed are located.</param>
+            <param name="files">The array of all files that are to be removed relative to the directory info.</param>
+            <param name="documents">The supported documents search filter, used to indicate what files are to be removed.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.IndexProvider.AddText(System.IO.DirectoryInfo,Nequeo.Search.Engine.AddTextData[])">
+            <summary>
+            Add text to the existing index.
+            </summary>
+            <param name="directoryIndexInfo">The directory infomation where the index files are located.</param>
+            <param name="addTextData">The text data to add.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.IndexProvider.RemoveText(System.IO.DirectoryInfo,System.String[])">
+            <summary>
+            Remove text from the existing index.
+            </summary>
+            <param name="directoryIndexInfo">The directory infomation where the index files are located.</param>
+            <param name="names">An array of unique names for the text.</param>
+        </member>
+        <member name="T:Nequeo.Search.Engine.QuotedStringModel">
+            <summary>
+            Quoted string model.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.QuotedStringModel.Quoted">
+            <summary>
+            Gets or sets the quoted indicator.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.QuotedStringModel.QuotedText">
+            <summary>
+            Gets or sets the quoted text.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Search.Engine.FileFacetModel">
+            <summary>
+            File facet data model.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.FileFacetModel.#ctor(System.IO.DirectoryInfo,Nequeo.Search.Engine.SupportedDocumentExtension)">
+            <summary>
+            
+            </summary>
+            <param name="directoryInfo">The directory information where all the files that are to be added are located.</param>
+            <param name="documents">The supported documents search filter, used to indicate what files are to be added for the dimension and path.</param>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FileFacetModel.DirectoryInfo">
+            <summary>
+            Gets or sets the directory information where all the files that are to be added are located.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FileFacetModel.Documents">
+            <summary>
+            Gets or sets the supported documents search filter, used to indicate what files are to be added for the dimension and path.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Search.Engine.FacetPathResult">
+            <summary>
+            Facet path result.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.FacetPathResult.#ctor(System.String,System.Single,System.String[])">
+            <summary>
+            Facet path.
+            </summary>
+            <param name="dimensionName">The dimension name.</param>
+            <param name="number">The number of items found for this path.</param>
+            <param name="path">The facet paths for the dimension.</param>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FacetPathResult.DimensionName">
+            <summary>
+            Gets or sets the dimension name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FacetPathResult.Number">
+            <summary>
+            Gets or sets the number of items found for this path.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FacetPathResult.Path">
+            <summary>
+            Gets or sets the facet paths for the dimension.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Search.Engine.SearchProvider">
+            <summary>
+            Full-Text search engine search provider, used to search indexed documents.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.SearchProvider.#ctor(System.IO.DirectoryInfo)">
+            <summary>
+            Full-Text search engine search provider, used to search indexed documents.
+            </summary>
+            <param name="directoryIndexInfo">The directory infomation where the index files are located.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.SearchProvider.#ctor(System.IO.DirectoryInfo[])">
+            <summary>
+            Full-Text search engine search provider, used to search indexed documents.
+            </summary>
+            <param name="directoryIndexInfos">The array directory infomation where the index files are located.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.SearchProvider.#ctor(System.IO.DirectoryInfo,System.IO.DirectoryInfo)">
+            <summary>
+            Search engine search provider, used to search indexed documents.
+            </summary>
+            <param name="directoryIndexInfo">The directory infomation where the index files are located.</param>
+            <param name="directoryFacetInfo">The directory infomation where the facet files are to be placed.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.SearchProvider.#ctor(System.IO.DirectoryInfo[],System.IO.DirectoryInfo)">
+            <summary>
+            Search engine search provider, used to search indexed documents.
+            </summary>
+            <param name="directoryIndexInfos">The array directory infomation where the index files are located.</param>
+            <param name="directoryFacetInfo">The directory infomation where the facet files are to be placed.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.SearchProvider.SearchText(System.String,System.Int32)">
+            <summary>
+            Search text in the existing index.
+            </summary>
+            <param name="text">The text to search for.</param>
+            <param name="numberToReturn">The maximum number of documents to return.</param>
+            <returns>The text data.</returns>
+            <remarks>Search for text that is stored along with the index data.
+            Use wildcard chars ('*', '?', '\'), logical ('AND', 'OR'), Quoted exact phrase ("search this")</remarks>
+        </member>
+        <member name="M:Nequeo.Search.Engine.SearchProvider.SearchDocument(System.String,System.Int32)">
+            <summary>
+            Search file content in the existing index.
+            </summary>
+            <param name="text">The text to search for.</param>
+            <param name="numberToReturn">The maximum number of documents to return.</param>
+            <returns>The file document.</returns>
+            <remarks>Use wildcard chars ('*', '?', '\'), logical ('AND', 'OR'), Quoted exact phrase ("search this").</remarks>
+        </member>
+        <member name="M:Nequeo.Search.Engine.SearchProvider.SearchFacetDocument(System.String,Nequeo.Search.Engine.FacetData.IndexField[],Nequeo.Search.Engine.FacetPath[],System.Int32)">
+            <summary>
+            Search facet content in the existing index.
+            </summary>
+            <param name="text">The text to search for.</param>
+            <param name="indexFields">The array of index fields to search in.</param>
+            <param name="facetPaths">The array of facet paths to perform a drill down search on.</param>
+            <param name="numberToReturn">The maximum number of documents to return.</param>
+            <returns>The facet document.</returns>
+            <remarks>Use wildcard chars ('*', '?', '\'), logical ('AND', 'OR'), Quoted exact phrase ("search this").</remarks>
+        </member>
+        <member name="M:Nequeo.Search.Engine.SearchProvider.GetTaxonomyFacetCounts(Lucene.Net.Facet.Taxonomy.TaxonomyReader,Lucene.Net.Facet.FacetsConfig,Lucene.Net.Facet.FacetsCollector,System.String)">
+            <summary>
+            Get the taxonomy facet caounts
+            </summary>
+            <param name="taxoReader">The taxonomy reader.</param>
+            <param name="config">The facet configuration.</param>
+            <param name="collector">The result collector.</param>
+            <param name="indexFieldName">The index field name.</param>
+            <returns>The facets.</returns>
+        </member>
+        <member name="M:Nequeo.Search.Engine.SearchProvider.ContainsWildcard(System.String)">
+            <summary>
+            Does the word contain a wildcard.
+            </summary>
+            <param name="word">The word to examine.</param>
+            <returns>True if a wild card exists; else false.</returns>
+        </member>
+        <member name="M:Nequeo.Search.Engine.SearchProvider.FindQuotedText(System.String)">
+            <summary>
+            Find all the quoted text.
+            </summary>
+            <param name="text">The text to search.</param>
+            <returns>The quoted text list; the last string item in the collection is un-quoted text.</returns>
+        </member>
+        <member name="M:Nequeo.Search.Engine.SearchProvider.CreateLogicalQuery(System.String,System.String)">
+            <summary>
+            Create the logical query.
+            </summary>
+            <param name="text">The complete text.</param>
+            <param name="searchFieldName">The name of the field to search.</param>
+            <returns>The query result.</returns>
+        </member>
+        <member name="M:Nequeo.Search.Engine.SearchProvider.CreateQuotedQuery(System.String,System.String)">
+            <summary>
+            Create the quoted query.
+            </summary>
+            <param name="text">The quoted text.</param>
+            <param name="searchFieldName">The name of the field to search.</param>
+            <returns>The query result.</returns>
+        </member>
+        <member name="M:Nequeo.Search.Engine.SearchProvider.CreateBoolenQuery(System.String,Lucene.Net.Search.BooleanClause.Occur,System.String)">
+            <summary>
+            Create the complete query.
+            </summary>
+            <param name="text">The complete text.</param>
+            <param name="clause">The term clause value.</param>
+            <param name="searchFieldName">The name of the field to search.</param>
+            <returns>The query result.</returns>
+        </member>
+        <member name="M:Nequeo.Search.Engine.SearchProvider.Dispose">
+            <summary>
+            Implement IDisposable.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.SearchProvider.Dispose(System.Boolean)">
+            <summary>
+            Dispose(bool disposing) executes in two distinct scenarios.
+            If disposing equals true, the method has been called directly
+            or indirectly by a user's code. Managed and unmanaged resources
+            can be disposed.
+            If disposing equals false, the method has been called by the
+            runtime from inside the finalizer and you should not reference
+            other objects. Only unmanaged resources can be disposed.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.SearchProvider.Finalize">
+            <summary>
+            Use C# destructor syntax for finalization code.
+            This destructor will run only if the Dispose method
+            does not get called.
+            It gives your base class the opportunity to finalize.
+            Do not provide destructors in types derived from this class.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Search.Engine.SupportedDocuments">
+            <summary>
+            Supported search engine documents.
+            </summary>
+        </member>
+        <member name="F:Nequeo.Search.Engine.SupportedDocuments.Txt">
+            <summary>
+            Text document.
+            </summary>
+        </member>
+        <member name="F:Nequeo.Search.Engine.SupportedDocuments.Rtf">
+            <summary>
+            RTF document.
+            </summary>
+        </member>
+        <member name="F:Nequeo.Search.Engine.SupportedDocuments.Pdf">
+            <summary>
+            PDF document.
+            </summary>
+        </member>
+        <member name="F:Nequeo.Search.Engine.SupportedDocuments.Html">
+            <summary>
+            HTML document.
+            </summary>
+        </member>
+        <member name="F:Nequeo.Search.Engine.SupportedDocuments.Xml">
+            <summary>
+            Xml document.
+            </summary>
+        </member>
+        <member name="F:Nequeo.Search.Engine.SupportedDocuments.Docx">
+            <summary>
+            MS word document.
+            </summary>
+        </member>
+        <member name="F:Nequeo.Search.Engine.SupportedDocuments.All">
+            <summary>
+            All supported documents.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Search.Engine.FacetPath">
+            <summary>
+            Facet path.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.FacetPath.#ctor(System.String,System.String[])">
+            <summary>
+            Facet path.
+            </summary>
+            <param name="dimensionName">The dimension name.</param>
+            <param name="path">The facet paths for the dimension.</param>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FacetPath.DimensionName">
+            <summary>
+            Gets or sets the dimension name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FacetPath.Path">
+            <summary>
+            Gets or sets the facet paths for the dimension.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Search.Engine.FacetData">
+            <summary>
+            Facet data.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.FacetData.#ctor">
+            <summary>
+            Facet data.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FacetData.TextFacetFields">
+            <summary>
+            Gets the text facet fields.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FacetData.FileFacetFields">
+            <summary>
+            Gets the file facet fields.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FacetData.Hierarchicals">
+            <summary>
+            Gets or sets the array of hierarchical items.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FacetData.MultiValues">
+            <summary>
+            Gets or sets the array of multi valued items.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FacetData.RequireDimensionCounts">
+            <summary>
+            Gets or sets the array of require dimension count items.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FacetData.IndexFields">
+            <summary>
+            Gets or sets the array of index fields.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Search.Engine.FacetData.Hierarchical">
+            <summary>
+            Hierarchical item (if this dimension is hierarchical (has depth > 1 paths)).
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.FacetData.Hierarchical.#ctor(System.String,System.Boolean)">
+            <summary>
+            Hierarchical item.
+            </summary>
+            <param name="dimensionName">The dimension name.</param>
+            <param name="isHierarchical">True if this dimension is hierarchical (has depth > 1 paths).</param>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FacetData.Hierarchical.DimensionName">
+            <summary>
+            Gets or sets the dimension name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FacetData.Hierarchical.IsHierarchical">
+            <summary>
+            Gets or sets true if this dimension is hierarchical (has depth > 1 paths).
+            </summary>
+        </member>
+        <member name="T:Nequeo.Search.Engine.FacetData.MultiValued">
+            <summary>
+            Multi valued item (if this dimension may have more than one value per document).
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.FacetData.MultiValued.#ctor(System.String,System.Boolean)">
+            <summary>
+            Multi valued item.
+            </summary>
+            <param name="dimensionName">The dimension name.</param>
+            <param name="isMultiValue">True if this dimension may have more than one value per document.</param>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FacetData.MultiValued.DimensionName">
+            <summary>
+            Gets or sets the dimension name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FacetData.MultiValued.IsMultiValue">
+            <summary>
+            Gets or sets true if this dimension may have more than one value per document.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Search.Engine.FacetData.RequireDimensionCount">
+            <summary>
+            Require dimension count item (if at search time you require accurate counts of the dimension, i.e. how many hits have this dimension).
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.FacetData.RequireDimensionCount.#ctor(System.String,System.Boolean)">
+            <summary>
+            Require dimension count item.
+            </summary>
+            <param name="dimensionName">The dimension name.</param>
+            <param name="isAccurateCountsRequired">True if at search time you require accurate counts of the dimension, i.e. how many hits have this dimension.</param>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FacetData.RequireDimensionCount.DimensionName">
+            <summary>
+            Gets or sets the dimension name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FacetData.RequireDimensionCount.IsAccurateCountsRequired">
+            <summary>
+            Gets or sets true if at search time you require accurate counts of the dimension, i.e. how many hits have this dimension.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Search.Engine.FacetData.IndexField">
+            <summary>
+            Index field item (specify which index field name should hold the ordinals for this dimension).
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.FacetData.IndexField.#ctor(System.String,System.String)">
+            <summary>
+            Index field item.
+            </summary>
+            <param name="dimensionName">The dimension name.</param>
+            <param name="indexFieldName">The index field name.</param>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FacetData.IndexField.DimensionName">
+            <summary>
+            Gets or sets the dimension name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FacetData.IndexField.IndexFieldName">
+            <summary>
+            Gets or sets the index field name.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.FacetData.AddFacet(System.String,Nequeo.Search.Engine.AddTextData[],System.String[])">
+            <summary>
+            Add a new text facet label.
+            </summary>
+            <param name="dimensionName">The dimension name.</param>
+            <param name="addTextData">The text data to add for the dimension and path.</param>
+            <param name="path">The facet paths for the dimension.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.FacetData.AddFacet(System.String,System.IO.DirectoryInfo,Nequeo.Search.Engine.SupportedDocumentExtension,System.String[])">
+            <summary>
+            Add a new text facet label.
+            </summary>
+            <param name="dimensionName">The dimension name.</param>
+            <param name="directoryInfo">The directory information where all the files that are to be added are located.</param>
+            <param name="documents">The supported documents search filter, used to indicate what files are to be added for the dimension and path.</param>
+            <param name="path">The facet paths for the dimension.</param>
+        </member>
+        <member name="T:Nequeo.Search.Engine.AddTextData">
+            <summary>
+            Add text data.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.AddTextData.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            Add text document.
+            </summary>
+            <param name="name">A unique name for the text.</param>
+            <param name="text">The text to add.</param>
+            <param name="storeText">Should the text be store as well as being searchable.</param>
+        </member>
+        <member name="P:Nequeo.Search.Engine.AddTextData.Name">
+            <summary>
+            Gets or set the unique name for the text.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.AddTextData.Text">
+            <summary>
+            Gets or set the text.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.AddTextData.StoreText">
+            <summary>
+            Gets or set an indicator sepcifying if the text should be store as well as being searchable.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Search.Engine.SupportedDocumentExtension">
+            <summary>
+            Supported document extensions that are to be searched.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.SupportedDocumentExtension.#ctor(Nequeo.Search.Engine.SupportedDocuments)">
+            <summary>
+            Supported document extensions that are to be searched.
+            </summary>
+            <param name="supportedDocuments">The supported documents.</param>
+        </member>
+        <member name="P:Nequeo.Search.Engine.SupportedDocumentExtension.StoreContent">
+            <summary>
+            Gets or sets an indicator specifying if the content should be stored.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.SupportedDocumentExtension.TokenizeContent">
+            <summary>
+            Gets or sets an indicator specifying if the content should be tokenized.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.SupportedDocumentExtension.MaxDocumentSizePerCommit">
+            <summary>
+            Gets or sets the maximum document size to add to each index (in MB Megabytes).
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.SupportedDocumentExtension.SupportedDocuments">
+            <summary>
+            Gets or sets the supported document type.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.SupportedDocumentExtension.SearchOption">
+            <summary>
+            Gets or sets whether to search the current directory, or the current directory and all subdirectories.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.SupportedDocumentExtension.RemoveAllSearchPatterns">
+            <summary>
+            Remove all search patterns.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.SupportedDocumentExtension.RemoveSearchPatterns(Nequeo.Search.Engine.SupportedDocuments,System.String[])">
+            <summary>
+            Remove a collection of search patterns for the document.
+            </summary>
+            <param name="supportedDocuments">The supported document format.</param>
+            <param name="searchPatterns">The list of search patterns.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.SupportedDocumentExtension.AddSearchPatterns(Nequeo.Search.Engine.SupportedDocuments,System.String[])">
+            <summary>
+            Add a collection of search patterns to the document.
+            </summary>
+            <param name="supportedDocuments">The supported document format.</param>
+            <param name="searchPatterns">The list of search patterns.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.SupportedDocumentExtension.GetFormattedSearchPatterns(Nequeo.Search.Engine.SupportedDocuments)">
+            <summary>
+            Get the formatted search patterns.
+            </summary>
+            <param name="supportedDocuments">The supported document format.</param>
+            <returns>Semi-colon (;) seperated aearch patters.</returns>
+        </member>
+        <member name="M:Nequeo.Search.Engine.SupportedDocumentExtension.AddDefaultExtensions">
+            <summary>
+            Add default extensions.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Search.Engine.Filter.DirectoryFilter">
+            <summary>
+            Directory filter.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.DirectoryFilter.#ctor">
+            <summary>
+            Directory filter.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.DirectoryFilter.AddDocuments(Lucene.Net.Index.IndexWriter,System.IO.DirectoryInfo,Nequeo.Search.Engine.SupportedDocumentExtension)">
+            <summary>
+            Add documents.
+            </summary>
+            <param name="writer">The index writer.</param>
+            <param name="directoryInfo">The directory information where all the files that are to be added are located.</param>
+            <param name="documents">The supported documents search filter, used to indicate what files are to be added.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.DirectoryFilter.RemoveDocuments(System.IO.DirectoryInfo,System.String[],Nequeo.Search.Engine.SupportedDocumentExtension)">
+            <summary>
+            Remove documents from the existing index.
+            </summary>
+            <param name="directoryInfo">The top level relative directory information where all the files that are to be removed are located.</param>
+            <param name="files">The array of all files that are to be removed relative to the directory info.</param>
+            <param name="documents">The supported documents search filter, used to indicate what files are to be removed.</param>
+            <returns>The array of queries that indicate which documents are to be removed.</returns>
+        </member>
+        <member name="T:Nequeo.Search.Engine.Filter.FacetFilter">
+            <summary>
+            Facet filter.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.FacetFilter.#ctor">
+            <summary>
+            Facet filter.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.FacetFilter.AddDocuments(Lucene.Net.Index.IndexWriter,Lucene.Net.Facet.Taxonomy.Directory.DirectoryTaxonomyWriter,Nequeo.Search.Engine.FacetData)">
+            <summary>
+            Add documents.
+            </summary>
+            <param name="writer">The index writer.</param>
+            <param name="facetWriter">The facet index writer.</param>
+            <param name="facetData">The complete facet information used to build the index information.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.FacetFilter.AddFile(Lucene.Net.Index.IndexWriter,Lucene.Net.Facet.Taxonomy.Directory.DirectoryTaxonomyWriter,System.Collections.Generic.Dictionary{Lucene.Net.Facet.FacetField,Nequeo.Search.Engine.FileFacetModel},Lucene.Net.Facet.FacetsConfig)">
+            <summary>
+            Add text to the existing index.
+            </summary>
+            <param name="writer">The index writer.</param>
+            <param name="facetWriter">The facet index writer.</param>
+            <param name="addFileData">The file data to add.</param>
+            <param name="config">The facet configuration information.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.FacetFilter.AddText(Lucene.Net.Index.IndexWriter,Lucene.Net.Facet.Taxonomy.Directory.DirectoryTaxonomyWriter,System.Collections.Generic.Dictionary{Lucene.Net.Facet.FacetField,Nequeo.Search.Engine.AddTextData[]},Lucene.Net.Facet.FacetsConfig)">
+            <summary>
+            Add text to the existing index.
+            </summary>
+            <param name="writer">The index writer.</param>
+            <param name="facetWriter">The facet index writer.</param>
+            <param name="addTextData">The text data to add.</param>
+            <param name="config">The facet configuration information.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.FacetFilter.RemoveDocuments(System.String[],System.String[])">
+            <summary>
+            Remove facet documents from the existing index.
+            </summary>
+            <param name="textNames">The array of names for text data.</param>
+            <param name="filePaths">The array of full paths (without root 'C:\'. e.g. 'temp/http/index.html') for file documents.</param>
+            <returns>The array of queries that indicate which documents are to be removed.</returns>
+        </member>
+        <member name="T:Nequeo.Search.Engine.Filter.HtmlFilter">
+            <summary>
+            Html document filter.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.HtmlFilter.#ctor">
+            <summary>
+            Html document filter.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.HtmlFilter.AddDocuments(Lucene.Net.Index.IndexWriter,System.IO.DirectoryInfo,System.String[],Nequeo.Search.Engine.SupportedDocumentExtension)">
+            <summary>
+            Add documents.
+            </summary>
+            <param name="writer">The index writer.</param>
+            <param name="directoryInfo">The directory information where all the files that are to be added are located.</param>
+            <param name="files">The list of files that are to be added.</param>
+            <param name="documents">The supported documents search filter, used to indicate what files are to be added.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.HtmlFilter.AddDocuments(Lucene.Net.Index.IndexWriter,Lucene.Net.Facet.Taxonomy.Directory.DirectoryTaxonomyWriter,System.IO.DirectoryInfo,System.String[],Nequeo.Search.Engine.SupportedDocumentExtension,Lucene.Net.Facet.FacetField,Lucene.Net.Facet.FacetsConfig)">
+            <summary>
+            Add documents.
+            </summary>
+            <param name="writer">The index writer.</param>
+            <param name="facetWriter">The facet index writer.</param>
+            <param name="directoryInfo">The directory information where all the files that are to be added are located.</param>
+            <param name="files">The list of files that are to be added.</param>
+            <param name="documents">The supported documents search filter, used to indicate what files are to be added.</param>
+            <param name="facetField">The facet field information.</param>
+            <param name="config">The facet configuration information.</param>
+        </member>
+        <member name="T:Nequeo.Search.Engine.Filter.MSDocFilter">
+            <summary>
+            Microsoft word document filter.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.MSDocFilter.#ctor">
+            <summary>
+            Microsoft word document filter.
+            </summary>
+        </member>
+        <member name="F:Nequeo.Search.Engine.Filter.MSDocFilter.nameSpace">
+            <summary>
+            The word processing namespace.
+            </summary>
+        </member>
+        <member name="F:Nequeo.Search.Engine.Filter.MSDocFilter.nameSpaceRelationships">
+            <summary>
+            The footer and header relationships
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.Filter.MSDocFilter.Document">
+            <summary>
+            Gets the word processing document.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.Filter.MSDocFilter.XmlDocument">
+            <summary>
+            Gets the xml document reference.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.MSDocFilter.AddDocuments(Lucene.Net.Index.IndexWriter,System.IO.DirectoryInfo,System.String[],Nequeo.Search.Engine.SupportedDocumentExtension)">
+            <summary>
+            Add documents.
+            </summary>
+            <param name="writer">The index writer.</param>
+            <param name="directoryInfo">The directory information where all the files that are to be added are located.</param>
+            <param name="files">The list of files that are to be added.</param>
+            <param name="documents">The supported documents search filter, used to indicate what files are to be added.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.MSDocFilter.AddDocuments(Lucene.Net.Index.IndexWriter,Lucene.Net.Facet.Taxonomy.Directory.DirectoryTaxonomyWriter,System.IO.DirectoryInfo,System.String[],Nequeo.Search.Engine.SupportedDocumentExtension,Lucene.Net.Facet.FacetField,Lucene.Net.Facet.FacetsConfig)">
+            <summary>
+            Add documents.
+            </summary>
+            <param name="writer">The index writer.</param>
+            <param name="facetWriter">The facet index writer.</param>
+            <param name="directoryInfo">The directory information where all the files that are to be added are located.</param>
+            <param name="files">The list of files that are to be added.</param>
+            <param name="documents">The supported documents search filter, used to indicate what files are to be added.</param>
+            <param name="facetField">The facet field information.</param>
+            <param name="config">The facet configuration information.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.MSDocFilter.OpenDocument(System.String)">
+            <summary>
+            Open a document with the template.
+            </summary>
+            <param name="path">The document path.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.MSDocFilter.CloseDocument">
+            <summary>
+            Close the document.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Search.Engine.Filter.PdfFilter">
+            <summary>
+            Pdf document filter.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.PdfFilter.#ctor">
+            <summary>
+            Pdf document filter.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.PdfFilter.AddDocuments(Lucene.Net.Index.IndexWriter,System.IO.DirectoryInfo,System.String[],Nequeo.Search.Engine.SupportedDocumentExtension)">
+            <summary>
+            Add documents.
+            </summary>
+            <param name="writer">The index writer.</param>
+            <param name="directoryInfo">The directory information where all the files that are to be added are located.</param>
+            <param name="files">The list of files that are to be added.</param>
+            <param name="documents">The supported documents search filter, used to indicate what files are to be added.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.PdfFilter.AddDocuments(Lucene.Net.Index.IndexWriter,Lucene.Net.Facet.Taxonomy.Directory.DirectoryTaxonomyWriter,System.IO.DirectoryInfo,System.String[],Nequeo.Search.Engine.SupportedDocumentExtension,Lucene.Net.Facet.FacetField,Lucene.Net.Facet.FacetsConfig)">
+            <summary>
+            Add documents.
+            </summary>
+            <param name="writer">The index writer.</param>
+            <param name="facetWriter">The facet index writer.</param>
+            <param name="directoryInfo">The directory information where all the files that are to be added are located.</param>
+            <param name="files">The list of files that are to be added.</param>
+            <param name="documents">The supported documents search filter, used to indicate what files are to be added.</param>
+            <param name="facetField">The facet field information.</param>
+            <param name="config">The facet configuration information.</param>
+        </member>
+        <member name="T:Nequeo.Search.Engine.Filter.RtfFilter">
+            <summary>
+            Rtf document filter.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.RtfFilter.#ctor">
+            <summary>
+            Rtf document filter.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.RtfFilter.AddDocuments(Lucene.Net.Index.IndexWriter,System.IO.DirectoryInfo,System.String[],Nequeo.Search.Engine.SupportedDocumentExtension)">
+            <summary>
+            Add documents.
+            </summary>
+            <param name="writer">The index writer.</param>
+            <param name="directoryInfo">The directory information where all the files that are to be added are located.</param>
+            <param name="files">The list of files that are to be added.</param>
+            <param name="documents">The supported documents search filter, used to indicate what files are to be added.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.RtfFilter.AddDocuments(Lucene.Net.Index.IndexWriter,Lucene.Net.Facet.Taxonomy.Directory.DirectoryTaxonomyWriter,System.IO.DirectoryInfo,System.String[],Nequeo.Search.Engine.SupportedDocumentExtension,Lucene.Net.Facet.FacetField,Lucene.Net.Facet.FacetsConfig)">
+            <summary>
+            Add documents.
+            </summary>
+            <param name="writer">The index writer.</param>
+            <param name="facetWriter">The facet index writer.</param>
+            <param name="directoryInfo">The directory information where all the files that are to be added are located.</param>
+            <param name="files">The list of files that are to be added.</param>
+            <param name="documents">The supported documents search filter, used to indicate what files are to be added.</param>
+            <param name="facetField">The facet field information.</param>
+            <param name="config">The facet configuration information.</param>
+        </member>
+        <member name="T:Nequeo.Search.Engine.Filter.TxtFilter">
+            <summary>
+            Txt document filter.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.TxtFilter.#ctor">
+            <summary>
+            Txt document filter.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.TxtFilter.AddDocuments(Lucene.Net.Index.IndexWriter,System.IO.DirectoryInfo,System.String[],Nequeo.Search.Engine.SupportedDocumentExtension)">
+            <summary>
+            Add documents.
+            </summary>
+            <param name="writer">The index writer.</param>
+            <param name="directoryInfo">The directory information where all the files that are to be added are located.</param>
+            <param name="files">The list of files that are to be added.</param>
+            <param name="documents">The supported documents search filter, used to indicate what files are to be added.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.TxtFilter.AddDocuments(Lucene.Net.Index.IndexWriter,Lucene.Net.Facet.Taxonomy.Directory.DirectoryTaxonomyWriter,System.IO.DirectoryInfo,System.String[],Nequeo.Search.Engine.SupportedDocumentExtension,Lucene.Net.Facet.FacetField,Lucene.Net.Facet.FacetsConfig)">
+            <summary>
+            Add documents.
+            </summary>
+            <param name="writer">The index writer.</param>
+            <param name="facetWriter">The facet index writer.</param>
+            <param name="directoryInfo">The directory information where all the files that are to be added are located.</param>
+            <param name="files">The list of files that are to be added.</param>
+            <param name="documents">The supported documents search filter, used to indicate what files are to be added.</param>
+            <param name="facetField">The facet field information.</param>
+            <param name="config">The facet configuration information.</param>
+        </member>
+        <member name="T:Nequeo.Search.Engine.Filter.XmlFilter">
+            <summary>
+            Xml document filter.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.XmlFilter.#ctor">
+            <summary>
+            Xml document filter.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.XmlFilter.AddDocuments(Lucene.Net.Index.IndexWriter,System.IO.DirectoryInfo,System.String[],Nequeo.Search.Engine.SupportedDocumentExtension)">
+            <summary>
+            Add documents.
+            </summary>
+            <param name="writer">The index writer.</param>
+            <param name="directoryInfo">The directory information where all the files that are to be added are located.</param>
+            <param name="files">The list of files that are to be added.</param>
+            <param name="documents">The supported documents search filter, used to indicate what files are to be added.</param>
+        </member>
+        <member name="M:Nequeo.Search.Engine.Filter.XmlFilter.AddDocuments(Lucene.Net.Index.IndexWriter,Lucene.Net.Facet.Taxonomy.Directory.DirectoryTaxonomyWriter,System.IO.DirectoryInfo,System.String[],Nequeo.Search.Engine.SupportedDocumentExtension,Lucene.Net.Facet.FacetField,Lucene.Net.Facet.FacetsConfig)">
+            <summary>
+            Add documents.
+            </summary>
+            <param name="writer">The index writer.</param>
+            <param name="facetWriter">The facet index writer.</param>
+            <param name="directoryInfo">The directory information where all the files that are to be added are located.</param>
+            <param name="files">The list of files that are to be added.</param>
+            <param name="documents">The supported documents search filter, used to indicate what files are to be added.</param>
+            <param name="facetField">The facet field information.</param>
+            <param name="config">The facet configuration information.</param>
+        </member>
+        <member name="T:Nequeo.Search.Engine.FacetDocument">
+            <summary>
+            Facet document model container.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FacetDocument.TotalHits">
+            <summary>
+            Gets or sets the total number of hits.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FacetDocument.MaxScore">
+            <summary>
+            Gets or sets the maximum score value encountered. Note that in case scores are not tracked.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FacetDocument.FacetPathResults">
+            <summary>
+            Gets or sets the facet path result.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FacetDocument.TextDataResults">
+            <summary>
+            Gets or sets the text data results.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FacetDocument.FileDocumentResults">
+            <summary>
+            Gets or sets the file document results.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Search.Engine.TextData">
+            <summary>
+            Text data model container.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.TextData.Results">
+            <summary>
+            Gets or sets the results.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.TextData.MaxScore">
+            <summary>
+            Gets or sets the maximum score value encountered. Note that in case scores are not tracked.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.TextData.TotalHits">
+            <summary>
+            Gets or sets the total number of hits.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Search.Engine.TextDataResult">
+            <summary>
+            Text data model container.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.TextDataResult.Name">
+            <summary>
+            Gets or set the text name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.TextDataResult.Text">
+            <summary>
+            Gets or set the text.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.TextDataResult.Score">
+            <summary>
+            Gets or sets the score of this document for the query.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.TextDataResult.Doc">
+            <summary>
+            Gets or sets the internal document identifier.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Search.Engine.FileDocument">
+            <summary>
+            File document model container.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FileDocument.Results">
+            <summary>
+            Gets or sets the results.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FileDocument.MaxScore">
+            <summary>
+            Gets or sets the maximum score value encountered. Note that in case scores are not tracked.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FileDocument.TotalHits">
+            <summary>
+            Gets or sets the total number of hits.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Search.Engine.FileDocumentResult">
+            <summary>
+            File document model container.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FileDocumentResult.Path">
+            <summary>
+            Gets or set the path.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FileDocumentResult.Modified">
+            <summary>
+            Gets or set the modified data.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FileDocumentResult.Score">
+            <summary>
+            Gets or sets the score of this document for the query.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Search.Engine.FileDocumentResult.Doc">
+            <summary>
+            Gets or sets the internal document identifier.
+            </summary>
+        </member>
+    </members>
+</doc>

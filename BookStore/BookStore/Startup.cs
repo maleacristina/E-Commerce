@@ -10,5 +10,6 @@ namespace BookStore
         {
             ConfigureAuth(app);
         }
+        
     }
 }

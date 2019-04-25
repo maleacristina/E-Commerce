@@ -13,8 +13,8 @@
 <br />
 <br />
 <br />
-@*<div>
-        @using (Html.BeginForm("Index", "Books", FormMethod.Get))
+<div>
+        @using (Html.BeginForm("Search", "Books", FormMethod.Get))
             {
             <b> Search by:</b>
                  @Html.RadioButton("searchBy", "Name", true) <text>Book</text>
@@ -22,7 +22,9 @@
                  <br/>
                  @Html.TextBox("search") <input type = "submit" value = "Search" class="btn"/>
             }
-        @using (Html.BeginForm("Index", "Books", FormMethod.Get))
+        
+
+        @*@using (Html.BeginForm("Index", "Books", FormMethod.Get))
         {
 
 
@@ -47,22 +49,22 @@
 
         </div>
 
-        }
+        }*@
 
 
-    </div>*@
+    </div>
 
 
 @*<input class="autocomplete" type="text" />*@
 
 
 
-@using (@Html.BeginForm())
+@*@using (@Html.BeginForm())
 {
     <b>Name: </b>
     @Html.TextBox("searchTerm", null, new { id = "autocomplete" })
     <input type="submit" value="Search" />
-}
+}*@
 
 @if (Model.Count() == 0)
 {
@@ -89,7 +91,7 @@ else
 
 
 
-@section Scripts {
+@*@section Scripts {
 
     <script src="~/Scripts/jquery-ui.js"></script>
 
@@ -115,4 +117,4 @@ else
         });
     </script>
     @Scripts.Render("~/bundles/jqueryval")
-}
+}*@

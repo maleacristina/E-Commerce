@@ -1,0 +1,1114 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nequeo.Model</name>
+    </assembly>
+    <members>
+        <member name="T:Nequeo.Model.Authenticate">
+            <summary>
+            Authenticated model.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Authenticate.Authenticated">
+            <summary>
+            Gets sets the authenticated.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Authenticate.Token">
+            <summary>
+            Gets sets the token.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.DefaultModel">
+            <summary>
+            General default mode.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.DefaultModel.Data">
+            <summary>
+            Gets sets the data.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.ExpressionModel">
+            <summary>
+            Expression model.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionModel.Last">
+            <summary>
+            Gets or sets the split the last expression into individual expressions.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionModel.Single">
+            <summary>
+            Gets or sets the split the single expression into individual expressions.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionModel.Any">
+            <summary>
+            Gets or sets the split the any expression into individual expressions.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionModel.All">
+            <summary>
+            Gets or sets the split the all expression into individual expressions.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionModel.Count">
+            <summary>
+            Gets or sets the split the count expression into individual expressions.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionModel.Where">
+            <summary>
+            Gets or sets the split the where expression into individual expressions.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionModel.First">
+            <summary>
+            Gets or sets the split the first expression into individual expressions.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionModel.Select">
+            <summary>
+            Gets or sets the split the select expression into individual expressions.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionModel.Orderby">
+            <summary>
+            Gets or sets the split the orderby expression into individual expressions.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionModel.OrderbyDescending">
+            <summary>
+            Gets or sets the split the orderby descending expression into individual expressions.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionModel.Thenby">
+            <summary>
+            Gets or sets the split the thenby expression into individual expressions.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionModel.ThenbyDescending">
+            <summary>
+            Gets or sets the split the thenby descending expression into individual expressions.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionModel.SkipInt32">
+            <summary>
+            Gest or sets the integer type of the skip value.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionModel.TakeInt32">
+            <summary>
+            Gest or sets the integer type of the take value.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionModel.SkipInt64">
+            <summary>
+            Gest or sets the long integer type of the skip value.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionModel.TakeInt64">
+            <summary>
+            Gest or sets the long integer type of the take value.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.ExpressionTreeModel">
+            <summary>
+            Expression tree model.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionTreeModel.Last">
+            <summary>
+            Gets or sets the last string from the query within the expression tree.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionTreeModel.Single">
+            <summary>
+            Gets or sets the single string from the query within the expression tree.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionTreeModel.Where">
+            <summary>
+            Gets or sets the where string from the query within the expression tree.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionTreeModel.First">
+            <summary>
+            Gets or sets the first string from the query within the expression tree.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionTreeModel.Select">
+            <summary>
+            Gets or sets the select string from the query within the expression tree.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionTreeModel.Orderby">
+            <summary>
+            Gets or sets the orderby string from the query within the expression tree.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionTreeModel.OrderbyDescending">
+            <summary>
+            Gets or sets the orderby descending string from the query within the expression tree.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionTreeModel.Thenby">
+            <summary>
+            Gets or sets the thenby string from the query within the expression tree.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionTreeModel.ThenbyDescending">
+            <summary>
+            Gets or sets the thenby descending string from the query within the expression tree.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionTreeModel.Skip">
+            <summary>
+            Gets or sets the skip string from the query within the expression tree.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionTreeModel.Take">
+            <summary>
+            Gets or sets the take string from the query within the expression tree.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionTreeModel.Count">
+            <summary>
+            Gets or sets the count string from the query within the expression tree.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionTreeModel.Any">
+            <summary>
+            Gets or sets the any string from the query within the expression tree.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.ExpressionTreeModel.All">
+            <summary>
+            Gets or sets the all string from the query within the expression tree.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Model.ExpressionTreeModel.GetExpression(System.Boolean)">
+            <summary>
+            Get the split and converted expression model data.
+            </summary>
+            <param name="removeDataPadding">Remove the database like padding from the expressions.</param>
+            <returns>The expression model.</returns>
+        </member>
+        <member name="M:Nequeo.Model.ExpressionTreeModel.GetWhereExpression">
+            <summary>
+            Split the where expression into individual expressions.
+            </summary>
+            <returns>Each where string expression; otherwise null.</returns>
+        </member>
+        <member name="M:Nequeo.Model.ExpressionTreeModel.GetFirstExpression">
+            <summary>
+            Split the first expression into individual expressions.
+            </summary>
+            <returns>Each where string expression; otherwise null.</returns>
+        </member>
+        <member name="M:Nequeo.Model.ExpressionTreeModel.GetSelectExpression">
+            <summary>
+            Split the select expression into individual expressions.
+            </summary>
+            <returns>Each where string expression; otherwise null.</returns>
+        </member>
+        <member name="M:Nequeo.Model.ExpressionTreeModel.GetOrderbyExpression">
+            <summary>
+            Split the orderby expression into individual expressions.
+            </summary>
+            <returns>Each where string expression; otherwise null.</returns>
+        </member>
+        <member name="M:Nequeo.Model.ExpressionTreeModel.GetOrderbyDescendingExpression">
+            <summary>
+            Split the orderbyDescending expression into individual expressions.
+            </summary>
+            <returns>Each where string expression; otherwise null.</returns>
+        </member>
+        <member name="M:Nequeo.Model.ExpressionTreeModel.GetThenbyExpression">
+            <summary>
+            Split the thenby expression into individual expressions.
+            </summary>
+            <returns>Each where string expression; otherwise null.</returns>
+        </member>
+        <member name="M:Nequeo.Model.ExpressionTreeModel.GetThenbyDescendingExpression">
+            <summary>
+            Split the thenbyDescending expression into individual expressions.
+            </summary>
+            <returns>Each where string expression; otherwise null.</returns>
+        </member>
+        <member name="M:Nequeo.Model.ExpressionTreeModel.GetCountExpression">
+            <summary>
+            Split the count expression into individual expressions.
+            </summary>
+            <returns>Each where string expression; otherwise null.</returns>
+        </member>
+        <member name="M:Nequeo.Model.ExpressionTreeModel.GetAnyExpression">
+            <summary>
+            Split the any expression into individual expressions.
+            </summary>
+            <returns>Each where string expression; otherwise null.</returns>
+        </member>
+        <member name="M:Nequeo.Model.ExpressionTreeModel.GetAllExpression">
+            <summary>
+            Split the all expression into individual expressions.
+            </summary>
+            <returns>Each where string expression; otherwise null.</returns>
+        </member>
+        <member name="M:Nequeo.Model.ExpressionTreeModel.GetLastExpression">
+            <summary>
+            Split the last expression into individual expressions.
+            </summary>
+            <returns>Each where string expression; otherwise null.</returns>
+        </member>
+        <member name="M:Nequeo.Model.ExpressionTreeModel.GetSingleExpression">
+            <summary>
+            Split the single expression into individual expressions.
+            </summary>
+            <returns>Each where string expression; otherwise null.</returns>
+        </member>
+        <member name="M:Nequeo.Model.ExpressionTreeModel.GetSkipInt32">
+            <summary>
+            Get the integer type of the skip value.
+            </summary>
+            <returns>The integer skip value; otherwise null.</returns>
+        </member>
+        <member name="M:Nequeo.Model.ExpressionTreeModel.GetSkipInt64">
+            <summary>
+            Get the long integer type of the skip value.
+            </summary>
+            <returns>The long integer skip value; otherwise null.</returns>
+        </member>
+        <member name="M:Nequeo.Model.ExpressionTreeModel.GetTakeInt32">
+            <summary>
+            Get the integer type of the take value.
+            </summary>
+            <returns>The integer take value; otherwise null.</returns>
+        </member>
+        <member name="M:Nequeo.Model.ExpressionTreeModel.GetTakeInt64">
+            <summary>
+            Get the long integer type of the take value.
+            </summary>
+            <returns>The long integer take value; otherwise null.</returns>
+        </member>
+        <member name="T:Nequeo.Model.FileDetails">
+            <summary>
+            File details.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.FileDetails.Name">
+            <summary>
+            Gets or sets the name of the file.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.FileDetails.Length">
+            <summary>
+            Gets or sets the size, in bytes, of the current file.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.FileDetails.Attributes">
+            <summary>
+            Gets or sets the attributes.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.FileDetails.CreationTime">
+            <summary>
+            Gets or sets the creation time of the current file or directory.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.FileDetails.CreationTimeUtc">
+            <summary>
+            Gets or sets the creation time, in coordinated universal time (UTC), of the current file or directory.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.FileDetails.Exists">
+            <summary>
+            Gets or sets a value indicating whether the file or directory exists.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.FileDetails.IsReadOnly">
+            <summary>
+            Gets or sets a value that determines if the current file is read only.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.FileDetails.Extension">
+            <summary>
+            Gets or sets the string representing the extension part of the file.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.FileDetails.FullName">
+            <summary>
+            Gets or sets the full path of the directory or file.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.FileDetails.Directory">
+            <summary>
+            Gets or sets an instance of the parent directory.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.FileDetails.DirectoryName">
+            <summary>
+            Gets or sets a string representing the directory's full path.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.FileDetails.LastAccessTime">
+            <summary>
+            Gets or sets the time the current file or directory was last accessed.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.FileDetails.LastAccessTimeUtc">
+            <summary>
+            Gets or sets the time, in coordinated universal time (UTC), that the current file or directory was last accessed.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.FileDetails.LastWriteTime">
+            <summary>
+            Gets or sets the time when the current file or directory was last written to.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.FileDetails.LastWriteTimeUtc">
+            <summary>
+            Gets or sets the time, in coordinated universal time (UTC), when the current file or directory was last written to.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.KeyModel">
+            <summary>
+            Key model.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.KeyModel.Name">
+            <summary>
+            Gets or sets the key name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.KeyModel.Version">
+            <summary>
+            Gets or sets the key version.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.KeyModel.KeyType">
+            <summary>
+            Gets or sete the stored key type.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.KeyModel.KeyID">
+            <summary>
+            Gets or sets the key ID.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.NameValue">
+            <summary>
+            Name value pair.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.NameValue.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.NameValue.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.NameByteArray">
+            <summary>
+            Name byte array pair.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.NameByteArray.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.NameByteArray.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.NameObject">
+            <summary>
+            Name oject pair.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.NameObject.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.NameObject.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.QueryType">
+            <summary>
+            The query type enum.
+            </summary>
+        </member>
+        <member name="F:Nequeo.Model.QueryType.Default">
+            <summary>
+            The letter value.
+            </summary>
+        </member>
+        <member name="F:Nequeo.Model.QueryType.Number">
+            <summary>
+            The number value.
+            </summary>
+        </member>
+        <member name="F:Nequeo.Model.QueryType.Special">
+            <summary>
+            The special chars value.
+            </summary>
+        </member>
+        <member name="F:Nequeo.Model.QueryType.Phrase">
+            <summary>
+            The phrase value.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.QueryModel">
+            <summary>
+            Query model.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.QueryModel.QueryType">
+            <summary>
+            Gets or sets the is query type. 
+            If phrase (e.g. 'The brown fox'), 
+            if special (e.g. '/\()%# .. etc), 
+            if number (e.g. '1, 2, 3, ... etc),
+            if default the based on the first letter of the word (e.g. 'Agf, Jddf, ... etc);
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.QueryModel.Query">
+            <summary>
+            Gets or sets the query text.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.QueryModel.MatchPartialQuery">
+            <summary>
+            Gets or sets the match query text. If false then matches the complete 
+            query text; else true attempts to match part of the query text.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.Language.LanguageTranslateCollection">
+            <summary>
+            Language translate collection model.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Language.LanguageTranslateCollection.Data">
+            <summary>
+            Gets or sets the data model.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.Language.Data">
+            <summary>
+            The data model.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Language.Data.Translations">
+            <summary>
+            Gets or sets the array of translations.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Language.Data.Languages">
+            <summary>
+            Gets or sets the array of language codes.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Language.Data.Detections">
+            <summary>
+            Gets or sets the detected language code array.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.Language.TranslationEx">
+            <summary>
+            Translation model.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Language.TranslationEx.TranslatedText">
+            <summary>
+            Gets or sets the translated text.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Language.TranslationEx.DetectedSourceLanguage">
+            <summary>
+            Gets or sets the detected source langauge code.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.Language.LanguageEx">
+            <summary>
+            Language model.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Language.LanguageEx.Language">
+            <summary>
+            Gets or sets the language code.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Language.LanguageEx.Name">
+            <summary>
+            Gets or sets the language name.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.Language.DetectedLanguageEx">
+            <summary>
+            Detected language model.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Language.DetectedLanguageEx.Language">
+            <summary>
+            Gets or sets the language code.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Language.DetectedLanguageEx.IsReliable">
+            <summary>
+            Gets or sets the is reliable indicator.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Language.DetectedLanguageEx.Confidence">
+            <summary>
+            Gets or sets the confidence value.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.Language.Translation">
+            <summary>
+            Translation model.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Language.Translation.Text">
+            <summary>
+            Gets or sets the translation.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.Language.Language">
+            <summary>
+            Language model.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Language.Language.Code">
+            <summary>
+            Gets or sets the language code.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.Language.DetectedLanguage">
+            <summary>
+            Detected language model.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Language.DetectedLanguage.Code">
+            <summary>
+            Gets or sets the detected language code.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.Conversion.ExportBatchModel">
+            <summary>
+            Export batch model
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.ExportBatchModel.ItemName">
+            <summary>
+            Gets sets, the unique name of the item.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.ExportBatchModel.Level1ID">
+            <summary>
+            Gets sets, the level 1 key identifer for the value.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.ExportBatchModel.Level2ID">
+            <summary>
+            Gets sets, the level 2 key identifer for the value.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.ExportBatchModel.Level3ID">
+            <summary>
+            Gets sets, the level 3 key identifer for the value.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.ExportBatchModel.ExportName">
+            <summary>
+            Gets sets, the export file name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.ExportBatchModel.Data">
+            <summary>
+            Gets sets, the data value;
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.ExportBatchModel.Value">
+            <summary>
+            Gets sets, the data value;
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.Conversion.PathDetailModel">
+            <summary>
+            Path details model
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.PathDetailModel.DriveName">
+            <summary>
+            Gets sets, the drive name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.PathDetailModel.FolderName">
+            <summary>
+            Gets sets, the folder name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.PathDetailModel.FileName">
+            <summary>
+            Gets sets, the file name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.PathDetailModel.FileExtension">
+            <summary>
+            Gets sets, the file extension
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.Conversion.TransformModel">
+            <summary>
+            Data transform model type.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.TransformModel.Level1ID">
+            <summary>
+            Gets sets, the level 1 key identifer for the value.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.TransformModel.Level2ID">
+            <summary>
+            Gets sets, the level 2 key identifer for the value.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.TransformModel.Level3ID">
+            <summary>
+            Gets sets, the level 3 key identifer for the value.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.TransformModel.Data">
+            <summary>
+            Gets sets, generic data type..
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.TransformModel.CategoryID">
+            <summary>
+            Gets sets, the top level category key identifer for the value.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.TransformModel.ValueID">
+            <summary>
+            Gets sets, the data value key identifer.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.TransformModel.ValueName">
+            <summary>
+            Gets sets, the data value name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.TransformModel.ValueType">
+            <summary>
+            Gets sets, the type of the value.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.TransformModel.ValueFormat">
+            <summary>
+            Gets sets, the format of the value.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.TransformModel.Value">
+            <summary>
+            Gets sets, the value.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.TransformModel.SufixFileName">
+            <summary>
+            Gets sets, any sufix filename data.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.TransformModel.SpecificFileName">
+            <summary>
+            Gets sets, any specific filename data.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.Conversion.TransformXmlModel">
+            <summary>
+            Xml Data transform model type.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.TransformXmlModel.Version">
+            <summary>
+            Gets sets, the xml veraion (e.g. 1.0)
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.TransformXmlModel.Encoding">
+            <summary>
+            Gets sets, the xml encoding type (e.g. utf-8)
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.TransformXmlModel.Standalone">
+            <summary>
+            Gets sets, the standalone value (e.g. yes, no)
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.TransformXmlModel.RootElementName">
+            <summary>
+            Gets sets, the root element name (e.g. configuration)
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.TransformXmlModel.Nodes">
+            <summary>
+            Gets sets, the xml node collection.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.TransformXmlModel.Data">
+            <summary>
+            Gets sets, the data collection
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Conversion.TransformXmlModel.FileNames">
+            <summary>
+            Gets sets, the list of specific file names for each node.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.PropertyInfoModel">
+            <summary>
+            Property info model container
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.PropertyInfoModel.PropertyName">
+            <summary>
+            Gets sets, the property name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.PropertyInfoModel.PropertyValue">
+            <summary>
+            Gets sets, the property value.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.PropertyInfoModel.PropertyType">
+            <summary>
+            Gets sets, the property type.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.PropertyModel">
+            <summary>
+            Property model container
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.PropertyModel.PropertyName">
+            <summary>
+            Gets sets, the property name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.PropertyModel.PropertyType">
+            <summary>
+            Gets sets, the property type.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.PropertyStringModel">
+            <summary>
+            Property string model container
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.PropertyStringModel.PropertyName">
+            <summary>
+            Gets sets, the property name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.PropertyStringModel.PropertyType">
+            <summary>
+            Gets sets, the property type.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.DataSource.BindingSourceParameter">
+            <summary>
+            Binding data source parameter
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.DataSource.BindingSourceParameter.Name">
+            <summary>
+            Gets sets, the parameter name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.DataSource.BindingSourceParameter.Value">
+            <summary>
+            Gets sets, the parameter value.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.DataSource.BindingSourceParameter.ValueType">
+            <summary>
+            Gets sets, the parameter value type.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.DataSource.BindingSourceData">
+            <summary>
+            Binding data source
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.DataSource.BindingSourceData.DataSource">
+            <summary>
+            Gets sets, the data source.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.DataSource.BindingSourceData.DataSourceName">
+            <summary>
+            Gets sets, the data source name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.DataSource.BindingSourceData.BindingSourceParameters">
+            <summary>
+            Gets sets, the data source binding parameters.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.Credentials">
+            <summary>
+            Credentials model.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Credentials.Username">
+            <summary>
+            Gets sets the username.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Credentials.Password">
+            <summary>
+            Gets sets the password.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Credentials.Domain">
+            <summary>
+            Gets sets the domain.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.Message.InformationRequest">
+            <summary>
+            Information request model
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.InformationRequest.RequestName">
+            <summary>
+            Gets sets the request name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.InformationRequest.RequestCode">
+            <summary>
+            Gets sets the request code, a unique client number.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.InformationRequest.Body">
+            <summary>
+            Gets sets the request body.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.Message.InformationResponse">
+            <summary>
+            Information response model
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.InformationResponse.RequestName">
+            <summary>
+            Gets sets the request name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.InformationResponse.Body">
+            <summary>
+            Gets sets the response body.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.InformationResponse.ReturnCode">
+            <summary>
+            Gets sets the return code
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.InformationResponse.ErrorMessage">
+            <summary>
+            Gets sets the error message
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.Message.RequestResource">
+            <summary>
+            Resources request header
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.RequestResource.Method">
+            <summary>
+            Gets or sets the request method.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.RequestResource.Path">
+            <summary>
+            Gets or sets the resources path.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.RequestResource.Scheme">
+            <summary>
+            Gets or sets the resources scheme.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.RequestResource.ProtocolVersion">
+            <summary>
+            Gets or sets the protocol version
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.RequestResource.Authority">
+            <summary>
+            Gets or sets the connection authority.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.Message.ResponseResource">
+            <summary>
+            Resources response header
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.ResponseResource.Code">
+            <summary>
+            Gets or sets the response status code.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.ResponseResource.Subcode">
+            <summary>
+            Gets or sets the response status subcode.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.ResponseResource.Description">
+            <summary>
+            Gets or sets the response status description.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.ResponseResource.ProtocolVersion">
+            <summary>
+            Gets or sets the protocol version
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.Message.WebRequest">
+            <summary>
+            Web request model.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.WebRequest.Name">
+            <summary>
+            Gets sets the request name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.WebRequest.Token">
+            <summary>
+            Gets sets the token.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.WebRequest.Body">
+            <summary>
+            Gets sets the request body.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.Message.WebRequest`1">
+            <summary>
+            Web request model.
+            </summary>
+            <typeparam name="T">The body type.</typeparam>
+        </member>
+        <member name="P:Nequeo.Model.Message.WebRequest`1.Name">
+            <summary>
+            Gets sets the request name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.WebRequest`1.Token">
+            <summary>
+            Gets sets the token.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.WebRequest`1.Body">
+            <summary>
+            Gets sets the request body.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Model.Message.WebRequest`1.ExplicitAssignment(Nequeo.Model.Message.WebRequest,`0)">
+            <summary>
+            Explicit assignment.
+            </summary>
+            <param name="request">The request type.</param>
+            <param name="body">The body data.</param>
+        </member>
+        <member name="T:Nequeo.Model.Message.WebRequestBody`1">
+            <summary>
+            Web request body model.
+            </summary>
+            <typeparam name="T">The body type</typeparam>
+        </member>
+        <member name="P:Nequeo.Model.Message.WebRequestBody`1.Body">
+            <summary>
+            Gets sets the request body.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.Message.WebResponse">
+            <summary>
+            Web response model.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.WebResponse.Name">
+            <summary>
+            Gets sets the request name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.WebResponse.Body">
+            <summary>
+            Gets sets the response body.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.WebResponse.ReturnCode">
+            <summary>
+            Gets sets the return code
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.WebResponse.ErrorMessage">
+            <summary>
+            Gets sets the error message
+            </summary>
+        </member>
+        <member name="T:Nequeo.Model.Message.WebResponse`1">
+            <summary>
+            Web response model.
+            </summary>
+            <typeparam name="T">The body type.</typeparam>
+        </member>
+        <member name="P:Nequeo.Model.Message.WebResponse`1.Name">
+            <summary>
+            Gets sets the request name.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.WebResponse`1.Body">
+            <summary>
+            Gets sets the response body.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.WebResponse`1.ReturnCode">
+            <summary>
+            Gets sets the return code
+            </summary>
+        </member>
+        <member name="P:Nequeo.Model.Message.WebResponse`1.ErrorMessage">
+            <summary>
+            Gets sets the error message
+            </summary>
+        </member>
+        <member name="M:Nequeo.Model.Message.WebResponse`1.ExplicitAssignment(Nequeo.Model.Message.WebResponse,`0)">
+            <summary>
+            Explicit assignment.
+            </summary>
+            <param name="response">The response type.</param>
+            <param name="body">The body data.</param>
+        </member>
+        <member name="T:Nequeo.Model.Message.WebResponseBody`1">
+            <summary>
+            Web response body model.
+            </summary>
+            <typeparam name="T">The body type</typeparam>
+        </member>
+        <member name="P:Nequeo.Model.Message.WebResponseBody`1.Body">
+            <summary>
+            Gets sets the request body.
+            </summary>
+        </member>
+    </members>
+</doc>

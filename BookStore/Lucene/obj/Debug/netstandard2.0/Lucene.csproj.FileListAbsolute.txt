@@ -1,0 +1,9 @@
+C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\Lucene\bin\Debug\netstandard2.0\Lucene.deps.json
+C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\Lucene\bin\Debug\netstandard2.0\Lucene.dll
+C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\Lucene\bin\Debug\netstandard2.0\Lucene.pdb
+C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\Lucene\obj\Debug\netstandard2.0\Lucene.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\Lucene\obj\Debug\netstandard2.0\Lucene.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\Lucene\obj\Debug\netstandard2.0\Lucene.AssemblyInfo.cs
+C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\Lucene\obj\Debug\netstandard2.0\Lucene.dll
+C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\Lucene\obj\Debug\netstandard2.0\Lucene.pdb
+C:\Users\Asus\Desktop\GitHub\E-Commerce\BookStore\Lucene\obj\Debug\netstandard2.0\Lucene.csprojResolveAssemblyReference.cache

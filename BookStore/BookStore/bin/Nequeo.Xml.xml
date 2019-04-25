@@ -1,0 +1,843 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nequeo.Xml</name>
+    </assembly>
+    <members>
+        <member name="T:Nequeo.Xml.RootSerializableContext`1">
+            <summary>
+            The root serializable container for any generic type.
+            </summary>
+            <typeparam name="T">The type to examine.</typeparam>
+        </member>
+        <member name="F:Nequeo.Xml.RootSerializableContext`1.Item">
+            <summary>
+            The types to serialise within this root container.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Xml.RootSerializableContextArray`1">
+            <summary>
+            The root serializable container for any generic type.
+            </summary>
+            <typeparam name="T">The type to examine.</typeparam>
+        </member>
+        <member name="F:Nequeo.Xml.RootSerializableContextArray`1.Items">
+            <summary>
+            The array of types to serialise within this root container.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Xml.RootSerializableContextArray`2">
+            <summary>
+            The root serializable container for any generic type.
+            </summary>
+            <typeparam name="T1">The type to examine.</typeparam>
+            <typeparam name="T2">The type to examine.</typeparam>
+        </member>
+        <member name="F:Nequeo.Xml.RootSerializableContextArray`2.Items1">
+            <summary>
+            The array of types to serialise within this root container.
+            </summary>
+        </member>
+        <member name="F:Nequeo.Xml.RootSerializableContextArray`2.Items2">
+            <summary>
+            The array of types to serialise within this root container.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Xml.DateTimeFormatter">
+            <summary>
+            Date time formatter provider
+            </summary>
+        </member>
+        <member name="M:Nequeo.Xml.DateTimeFormatter.#ctor(System.String)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="format">A date time format.</param>
+        </member>
+        <member name="M:Nequeo.Xml.DateTimeFormatter.ChangeFormat(System.String)">
+            <summary>
+            Change the date time to the format type.
+            </summary>
+            <param name="xslDateTime">The date time data to format.</param>
+            <returns>The new formatted date time</returns>
+        </member>
+        <member name="T:Nequeo.Xml.Document">
+            <summary>
+            Xml document client.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Xml.Document.Serialise``1(``0)">
+            <summary>
+            Serialise the data of type.
+            </summary>
+            <typeparam name="T">The type to examine.</typeparam>
+            <param name="data">The data to transform.</param>
+            <returns>The serialised xml.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Document.ConvertDateTime(System.String,System.String,System.String,System.String)">
+            <summary>
+            Convert all date time elements in the xml to the format type.
+            </summary>
+            <param name="xml">The xml to transform.</param>
+            <param name="format">The date time format to replace the element with.</param>
+            <param name="dateTimeElementName">The date time element in the xml to convert.</param>
+            <param name="matchingTemplatePath">The matching template path used to locate the date time elements.</param>
+            <returns>The new xml with all date time elements converted.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Document.ConvertDateTime(System.String,System.String,System.String)">
+            <summary>
+            Convert all date time elements in the xml to the format type.
+            </summary>
+            <param name="xml">The xml to transform.</param>
+            <param name="format">The date time format to replace the element with.</param>
+            <param name="matchingTemplatePath">The full matching template path used to locate the date time elements.</param>
+            <returns>The new xml with all date time elements converted.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Document.CreateDocument(System.Xml.Linq.XElement,System.String,System.String,System.String,System.String)">
+            <summary>
+            Create the xml document within the xml file.
+            </summary>
+            <param name="node">The xml node to create.</param>
+            <param name="xmlFilePath">The file name to write to.</param>
+            <param name="version">The xml version.</param>
+            <param name="encoding">The xml encoding</param>
+            <param name="standalone">The xml standalone</param>
+            <returns>True if the xml was saved; else false</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Document.CreateDocument(System.Xml.Linq.XElement,System.String,System.String,System.String)">
+            <summary>
+            Create the xml document.
+            </summary>
+            <param name="node">The xml node to create.</param>
+            <param name="version">The xml version.</param>
+            <param name="encoding">The xml encoding</param>
+            <param name="standalone">The xml standalone</param>
+            <returns>The xml document.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Document.CreateDocument(System.Xml.XmlNameTable)">
+            <summary>
+            Create the xml document.
+            </summary>
+            <param name="table">The XmlNameTable to use.</param>
+            <returns>The xml document.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Document.LoadDocumentParseXmlString(System.String)">
+            <summary>
+            Load the xml document.
+            </summary>
+            <param name="xmlString">The xml string to load.</param>
+            <returns>The XDocument containing the document.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Document.LoadDocument(System.String,System.String,System.IO.Stream,System.IO.TextReader,System.Xml.XmlReader)">
+            <summary>
+            Load the xml document.
+            </summary>
+            <param name="xmlFilePath">The xml file to load.</param>
+            <param name="xmlString">The xml string to load.</param>
+            <param name="stream">A stream object to load.</param>
+            <param name="textReader">A text reader object to load.</param>
+            <param name="xmlReader">A xml reader object to load.</param>
+            <returns>The XDocument containing the document.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Document.LoadDocumentXmlFilePath(System.String)">
+            <summary>
+            Load the xml document.
+            </summary>
+            <param name="xmlFilePath">The xml file to load.</param>
+            <returns>The XDocument containing the document.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Document.LoadDocumentXmlString(System.String)">
+            <summary>
+            Load the xml document.
+            </summary>
+            <param name="xmlString">The xml string to load.</param>
+            <returns>The XDocument containing the document.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Document.LoadDocumentStream(System.IO.Stream)">
+            <summary>
+            Load the xml document.
+            </summary>
+            <param name="stream">A stream object to load.</param>
+            <returns>The XDocument containing the document.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Document.LoadDocumentTextReader(System.IO.TextReader)">
+            <summary>
+            Load the xml document.
+            </summary>
+            <param name="textReader">A text reader object to load.</param>
+            <returns>The XDocument containing the document.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Document.LoadDocumentXmlReader(System.Xml.XmlReader)">
+            <summary>
+            Load the xml document.
+            </summary>
+            <param name="xmlReader">A xml reader object to load.</param>
+            <returns>The XDocument containing the document.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Document.ExtractContent(System.Xml.Linq.XDocument)">
+            <summary>
+            Extract the content only from the document.
+            </summary>
+            <param name="xDocument">The XDocument to search in.</param>
+            <returns>The extracted content data.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Document.ExtractContent(System.Text.StringBuilder,System.Xml.Linq.XElement)">
+            <summary>
+            Extract content interator.
+            </summary>
+            <param name="builder">The string builder to store the content in.</param>
+            <param name="element">The current element.</param>
+        </member>
+        <member name="M:Nequeo.Xml.Document.ExtractContent(System.Xml.XmlDocument)">
+            <summary>
+            Extract the content only from the document.
+            </summary>
+            <param name="xDocument">The XDocument to search in.</param>
+            <returns>The extracted content data.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Document.ExtractContent(System.Text.StringBuilder,System.Xml.XmlNode)">
+            <summary>
+            Extract content interator.
+            </summary>
+            <param name="builder">The string builder to store the content in.</param>
+            <param name="element">The current element.</param>
+        </member>
+        <member name="T:Nequeo.Xml.Element">
+            <summary>
+            Xml element client.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Xml.Element.CreateElement(System.Xml.Linq.XName,Nequeo.Model.NameValue[])">
+            <summary>
+            Create an element.
+            </summary>
+            <param name="elementName">The parent element name.</param>
+            <param name="collection">The collection of child elements.</param>
+            <returns>The created xml element.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Element.CreateElement(System.Xml.Linq.XName,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Create an element.
+            </summary>
+            <param name="elementName">The parent element name.</param>
+            <param name="collection">The collection of child elements.</param>
+            <returns>The created xml element.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Element.CreateElement(System.Xml.Linq.XName,System.Xml.Linq.XElement)">
+            <summary>
+            Create an element.
+            </summary>
+            <param name="elementName">The parent element name.</param>
+            <param name="nextName">The child element name.</param>
+            <returns>The created xml element.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Element.Document(System.Byte[])">
+            <summary>
+            Create an xml document from the data.
+            </summary>
+            <param name="data">The array of bytes that contains the xml data.</param>
+            <returns>The xml document.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Element.ExtractNode(System.Byte[],System.String)">
+            <summary>
+            Extract the specified node.
+            </summary>
+            <param name="data">The array of bytes that contains the xml data.</param>
+            <param name="selectNode">The name of the selected node with a namespace; e.g. "//d:Text"</param>
+            <returns>Represents an ordered collection of nodes.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Element.ExtractNode(System.Byte[],Nequeo.Model.NameValue[],System.String)">
+            <summary>
+            Extract the specified node.
+            </summary>
+            <param name="data">The array of bytes that contains the xml data.</param>
+            <param name="namespaces">The array of namespaces. prefix and uri.</param>
+            <param name="selectNode">The name of the selected node with a namespace; e.g. "//d:Text"</param>
+            <returns>Represents an ordered collection of nodes.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Element.ExtractNode(System.Xml.XmlDocument,System.String)">
+            <summary>
+            Extract the specified node.
+            </summary>
+            <param name="xmlDoc">The xml document.</param>
+            <param name="selectNode">The name of the selected node with a namespace; e.g. "//d:Text"</param>
+            <returns>Represents an ordered collection of nodes.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Element.ExtractNode(System.Xml.XmlDocument,Nequeo.Model.NameValue[],System.String)">
+            <summary>
+            Extract the specified node.
+            </summary>
+            <param name="xmlDoc">The xml document.</param>
+            <param name="namespaces">The array of namespaces. prefix and uri.</param>
+            <param name="selectNode">The name of the selected node with a namespace; e.g. "//d:Text"</param>
+            <returns>Represents an ordered collection of nodes.</returns>
+        </member>
+        <member name="T:Nequeo.Xml.Encryption">
+            <summary>
+            Xml encryption provider.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Xml.Encryption.#ctor">
+            <summary>
+            Xml encryption provider.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Xml.Encryption.Key">
+            <summary>
+            Gets or sets the encryption key.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Xml.Encryption.Vector">
+            <summary>
+            Gets or sets the encryption vector.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Xml.Encryption.Encrypt(System.Xml.XmlDocument,System.String,System.String)">
+            <summary>
+            Encrypt the element within the xml document.
+            </summary>
+            <param name="document">The xml document containing the element to encrypt.</param>
+            <param name="elementToEncrypt">The element to encrypt in the xml document.</param>
+            <param name="keyName">The name to map to keyObject.</param>
+            <remarks>Encrypts the element using the AES symmetric alogorithm with cipher mode : CBC and padding mode : Zeros.
+            Includes an internal key and vector.</remarks>
+        </member>
+        <member name="M:Nequeo.Xml.Encryption.Encrypt(System.Xml.XmlDocument,System.String,System.Security.Cryptography.SymmetricAlgorithm,System.String)">
+            <summary>
+            Encrypt the element within the xml document.
+            </summary>
+            <param name="document">The xml document containing the element to encrypt.</param>
+            <param name="elementToEncrypt">The element to encrypt in the xml document.</param>
+            <param name="algorithm">The symmetric alogorithm used to encrypt the element.</param>
+            <param name="keyName">The name to map to keyObject.</param>
+        </member>
+        <member name="M:Nequeo.Xml.Encryption.Decrypt(System.Xml.XmlDocument,System.String)">
+            <summary>
+            Decrypts all EncryptedData elements of the XML document that were specified
+            during initialization of the System.Security.Cryptography.Xml.EncryptedXml class.
+            </summary>
+            <param name="document">The xml document containing the element to decrypt.</param>
+            <param name="keyName">The name to map to keyObject.</param>
+            <remarks>Decrypts the element using the AES symmetric alogorithm with cipher mode : CBC and padding mode : Zeros.
+            Includes an internal key and vector.</remarks>
+        </member>
+        <member name="M:Nequeo.Xml.Encryption.Decrypt(System.Xml.XmlDocument,System.Security.Cryptography.SymmetricAlgorithm,System.String)">
+            <summary>
+            Decrypts all EncryptedData elements of the XML document that were specified
+            during initialization of the System.Security.Cryptography.Xml.EncryptedXml class.
+            </summary>
+            <param name="document">The xml document containing the element to decrypt.</param>
+            <param name="algorithm">The symmetric alogorithm used to decrypt the element.</param>
+            <param name="keyName">The name to map to keyObject.</param>
+        </member>
+        <member name="M:Nequeo.Xml.Encryption.Encrypt(System.Xml.XmlDocument,System.String,System.Security.Cryptography.X509Certificates.X509Certificate2)">
+            <summary>
+            Encrypt the element within the xml document.
+            </summary>
+            <param name="document">The xml document containing the element to encrypt.</param>
+            <param name="elementToEncrypt">The element to encrypt.</param>
+            <param name="certificate">The certificate used to encrypt the element.</param>
+        </member>
+        <member name="M:Nequeo.Xml.Encryption.Decrypt(System.Xml.XmlDocument)">
+            <summary>
+            Decrypts all EncryptedData elements of the XML document that were specified
+            during initialization of the System.Security.Cryptography.Xml.EncryptedXml class.
+            </summary>
+            <param name="document">The xml document containing the element to decrypt.</param>
+            <remarks>Use this method along with the certificate store only.</remarks>
+        </member>
+        <member name="T:Nequeo.Xml.CodeGeneration.XmlToLinqConverter">
+            <summary>
+            Automatically convert valid XML to the corresponding LINQ to XML statements.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Xml.CodeGeneration.XmlToLinqConverter.CanConvert(System.String)">
+            <summary>
+            Can the xml be converted.
+            </summary>
+            <param name="xml">The xml document to examine.</param>
+            <returns>True if the xml is valide.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.CodeGeneration.XmlToLinqConverter.Convert(System.String)">
+            <summary>
+            Convert the xml to the equivalent linq to xml code.
+            </summary>
+            <param name="xml">The xml document to convert.</param>
+            <returns>The string equivalent linq to xml code.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.CodeGeneration.XmlToLinqConverter.GetSourceCode(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="xml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nequeo.Xml.CodeGeneration.XmlToLinqConverter.AddNamespace(System.Xml.Linq.XNamespace)">
+            <summary>
+            
+            </summary>
+            <param name="ns"></param>
+        </member>
+        <member name="M:Nequeo.Xml.CodeGeneration.XmlToLinqConverter.FindNamespaces">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nequeo.Xml.CodeGeneration.XmlToLinqConverter.IsSingleLineText(System.Xml.Linq.XElement)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nequeo.Xml.CodeGeneration.XmlToLinqConverter.Write(System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="ch"></param>
+        </member>
+        <member name="M:Nequeo.Xml.CodeGeneration.XmlToLinqConverter.Write(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="s"></param>
+        </member>
+        <member name="M:Nequeo.Xml.CodeGeneration.XmlToLinqConverter.WriteName(System.Xml.Linq.XName)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:Nequeo.Xml.CodeGeneration.XmlToLinqConverter.WriteNewElement(System.Xml.Linq.XElement)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nequeo.Xml.CodeGeneration.XmlToLinqConverter.WriteNewLine">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nequeo.Xml.CodeGeneration.XmlToLinqConverter.WriteNewObject(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="type"></param>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Nequeo.Xml.CodeGeneration.XmlToLinqConverter.WriteStringLiteral(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="s"></param>
+        </member>
+        <member name="M:Nequeo.Xml.CodeGeneration.XmlToLinqConverter.WriteXElement">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nequeo.Xml.CodeGeneration.XmlToLinqConverter.WriteXNamespaces">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nequeo.Xml.CodeGeneration.XmlToLinqConverter.disposed">
+            <summary>
+            Track whether Dispose has been called.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Xml.CodeGeneration.XmlToLinqConverter.Dispose">
+            <summary>
+            Implement IDisposable.
+            Do not make this method virtual.
+            A derived class should not be able to override this method.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Xml.CodeGeneration.XmlToLinqConverter.Dispose(System.Boolean)">
+            <summary>
+            Dispose(bool disposing) executes in two distinct scenarios.
+            If disposing equals true, the method has been called directly
+            or indirectly by a user's code. Managed and unmanaged resources
+            can be disposed.
+            If disposing equals false, the method has been called by the
+            runtime from inside the finalizer and you should not reference
+            other objects. Only unmanaged resources can be disposed.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Xml.CodeGeneration.XmlToLinqConverter.Finalize">
+            <summary>
+            Use C# destructor syntax for finalization code.
+            This destructor will run only if the Dispose method
+            does not get called.
+            It gives your base class the opportunity to finalize.
+            Do not provide destructors in types derived from this class.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Xml.Xsl.PathConversion">
+            <summary>
+            Xsl path conversion helper. 
+            </summary>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.PathConversion.DataModel``1(System.Collections.Generic.IEnumerable{``0},System.String[],System.String[])">
+            <summary>
+            Transforms the collection of data to a html table format.
+            </summary>
+            <typeparam name="T">The type to examine.</typeparam>
+            <param name="collection">The collection of data to transform.</param>
+            <param name="propertyNames">The property names that correspond to the element names</param>
+            <param name="headerNames">The header names to display, can be null.</param>
+            <returns>The transformed collection of data.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.PathConversion.DateFormat(System.String,System.Object,System.String,System.String,System.String)">
+            <summary>
+            Transforms the xml date time elements to a new xml format.
+            </summary>
+            <param name="xml">The xml to transform.</param>
+            <param name="extension">The instance of the etension object that formats the date time.</param>
+            <param name="extensionMethodName">The method in the extension object to call.</param>
+            <param name="extensionParameters">The paramters to pass to the extension method.</param>
+            <param name="matchingTemplatePath">The matching template path used to locate the date time elements.</param>
+            <returns>The transformed collection of data.</returns>
+        </member>
+        <member name="T:Nequeo.Xml.Xsl.Transformation">
+            <summary>
+            Xsl UTF8 transformation
+            </summary>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.FromFileToFile(System.String,System.String,System.String)">
+            <summary>
+            Transform from file to output file.
+            </summary>
+            <param name="xslFile">The xsl file transform.</param>
+            <param name="xmlFile">The xml file to transform.</param>
+            <param name="outputFile">The file to write the transformed result to.</param>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.FromFileToString(System.String,System.String)">
+            <summary>
+            Transform from file to in memory text.
+            </summary>
+            <param name="xslFile">The xsl file transform.</param>
+            <param name="xmlFile">The xml file to transform.</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.FromFileToString(System.String,System.String,System.Xml.Xsl.XsltArgumentList)">
+            <summary>
+            Transform from file to in memory text.
+            </summary>
+            <param name="xslFile">The xsl file transform.</param>
+            <param name="xmlFile">The xml file to transform.</param>
+            <param name="xsltArgumentList">The xslt argument list</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.FromFileToFile(System.String,System.String,System.String,System.Xml.Xsl.XsltArgumentList)">
+            <summary>
+            Transform from file to in file.
+            </summary>
+            <param name="xslString">The xsl string transform.</param>
+            <param name="xmlFile">The xml file to transform.</param>
+            <param name="xsltArgumentList">The xslt argument list</param>
+            <param name="outputFile">The file to write the transformed result to.</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.FromMemoryToMemory(System.String,System.String)">
+            <summary>
+            Transform from memory text to in memory text.
+            </summary>
+            <param name="xslString">The xsl text transform.</param>
+            <param name="xmlString">The xml text to transform.</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.FromMemoryToMemory(System.String,System.String,System.Xml.Xsl.XsltArgumentList)">
+            <summary>
+            Transform from memory text to in memory text.
+            </summary>
+            <param name="xslString">The xsl text transform.</param>
+            <param name="xmlString">The xml text to transform.</param>
+            <param name="xsltArgumentList">The xslt argument list</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.FromMemoryToFile(System.String,System.String,System.String)">
+            <summary>
+            Transform from memory text to output file.
+            </summary>
+            <param name="xslString">The xsl text transform.</param>
+            <param name="xmlString">The xml text to transform.</param>
+            <param name="outputFile">The file to write the transformed result to.</param>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.FromMemoryToFile(System.String,System.String,System.String,System.Xml.Xsl.XsltArgumentList)">
+            <summary>
+            Transform from memory text to output file.
+            </summary>
+            <param name="xslString">The xsl text transform.</param>
+            <param name="xmlString">The xml text to transform.</param>
+            <param name="outputFile">The file to write the transformed result to.</param>
+            <param name="xsltArgumentList">The xslt argument list</param>
+        </member>
+        <member name="T:Nequeo.Xml.Xsl.Transformation.ASCII">
+            <summary>
+            Xsl ASCII transformation
+            </summary>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.ASCII.FromFileToString(System.String,System.String)">
+            <summary>
+            Transform from file to in memory text.
+            </summary>
+            <param name="xslFile">The xsl file transform.</param>
+            <param name="xmlFile">The xml file to transform.</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.ASCII.FromFileToString(System.String,System.String,System.Xml.Xsl.XsltArgumentList)">
+            <summary>
+            Transform from file to in memory text.
+            </summary>
+            <param name="xslFile">The xsl file transform.</param>
+            <param name="xmlFile">The xml file to transform.</param>
+            <param name="xsltArgumentList">The xslt argument list</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.ASCII.FromMemoryToMemory(System.String,System.String)">
+            <summary>
+            Transform from memory text to in memory text.
+            </summary>
+            <param name="xslString">The xsl text transform.</param>
+            <param name="xmlString">The xml text to transform.</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.ASCII.FromMemoryToMemory(System.String,System.String,System.Xml.Xsl.XsltArgumentList)">
+            <summary>
+            Transform from memory text to in memory text.
+            </summary>
+            <param name="xslString">The xsl text transform.</param>
+            <param name="xmlString">The xml text to transform.</param>
+            <param name="xsltArgumentList">The xslt argument list</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.ASCII.FromMemoryToFile(System.String,System.String,System.String)">
+            <summary>
+            Transform from memory text to output file.
+            </summary>
+            <param name="xslString">The xsl text transform.</param>
+            <param name="xmlString">The xml text to transform.</param>
+            <param name="outputFile">The file to write the transformed result to.</param>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.ASCII.FromMemoryToFile(System.String,System.String,System.String,System.Xml.Xsl.XsltArgumentList)">
+            <summary>
+            Transform from memory text to output file.
+            </summary>
+            <param name="xslString">The xsl text transform.</param>
+            <param name="xmlString">The xml text to transform.</param>
+            <param name="outputFile">The file to write the transformed result to.</param>
+            <param name="xsltArgumentList">The xslt argument list</param>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.ASCII.FromFileToFile(System.String,System.String,System.String,System.Xml.Xsl.XsltArgumentList)">
+            <summary>
+            Transform from file to in file.
+            </summary>
+            <param name="xslString">The xsl string transform.</param>
+            <param name="xmlFile">The xml file to transform.</param>
+            <param name="xsltArgumentList">The xslt argument list</param>
+            <param name="outputFile">The file to write the transformed result to.</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+        <member name="T:Nequeo.Xml.Xsl.Transformation.Unicode">
+            <summary>
+            Xsl Unicode transformation
+            </summary>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.Unicode.FromFileToString(System.String,System.String)">
+            <summary>
+            Transform from file to in memory text.
+            </summary>
+            <param name="xslFile">The xsl file transform.</param>
+            <param name="xmlFile">The xml file to transform.</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.Unicode.FromFileToString(System.String,System.String,System.Xml.Xsl.XsltArgumentList)">
+            <summary>
+            Transform from file to in memory text.
+            </summary>
+            <param name="xslFile">The xsl file transform.</param>
+            <param name="xmlFile">The xml file to transform.</param>
+            <param name="xsltArgumentList">The xslt argument list</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.Unicode.FromMemoryToMemory(System.String,System.String)">
+            <summary>
+            Transform from memory text to in memory text.
+            </summary>
+            <param name="xslString">The xsl text transform.</param>
+            <param name="xmlString">The xml text to transform.</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.Unicode.FromMemoryToMemory(System.String,System.String,System.Xml.Xsl.XsltArgumentList)">
+            <summary>
+            Transform from memory text to in memory text.
+            </summary>
+            <param name="xslString">The xsl text transform.</param>
+            <param name="xmlString">The xml text to transform.</param>
+            <param name="xsltArgumentList">The xslt argument list</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.Unicode.FromMemoryToFile(System.String,System.String,System.String)">
+            <summary>
+            Transform from memory text to output file.
+            </summary>
+            <param name="xslString">The xsl text transform.</param>
+            <param name="xmlString">The xml text to transform.</param>
+            <param name="outputFile">The file to write the transformed result to.</param>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.Unicode.FromMemoryToFile(System.String,System.String,System.String,System.Xml.Xsl.XsltArgumentList)">
+            <summary>
+            Transform from memory text to output file.
+            </summary>
+            <param name="xslString">The xsl text transform.</param>
+            <param name="xmlString">The xml text to transform.</param>
+            <param name="outputFile">The file to write the transformed result to.</param>
+            <param name="xsltArgumentList">The xslt argument list</param>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.Unicode.FromFileToFile(System.String,System.String,System.String,System.Xml.Xsl.XsltArgumentList)">
+            <summary>
+            Transform from file to in file.
+            </summary>
+            <param name="xslString">The xsl string transform.</param>
+            <param name="xmlFile">The xml file to transform.</param>
+            <param name="xsltArgumentList">The xslt argument list</param>
+            <param name="outputFile">The file to write the transformed result to.</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+        <member name="T:Nequeo.Xml.Xsl.Transformation.UTF32">
+            <summary>
+            Xsl UTF32 transformation
+            </summary>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.UTF32.FromFileToString(System.String,System.String)">
+            <summary>
+            Transform from file to in memory text.
+            </summary>
+            <param name="xslFile">The xsl file transform.</param>
+            <param name="xmlFile">The xml file to transform.</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.UTF32.FromFileToString(System.String,System.String,System.Xml.Xsl.XsltArgumentList)">
+            <summary>
+            Transform from file to in memory text.
+            </summary>
+            <param name="xslFile">The xsl file transform.</param>
+            <param name="xmlFile">The xml file to transform.</param>
+            <param name="xsltArgumentList">The xslt argument list</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.UTF32.FromMemoryToMemory(System.String,System.String)">
+            <summary>
+            Transform from memory text to in memory text.
+            </summary>
+            <param name="xslString">The xsl text transform.</param>
+            <param name="xmlString">The xml text to transform.</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.UTF32.FromMemoryToMemory(System.String,System.String,System.Xml.Xsl.XsltArgumentList)">
+            <summary>
+            Transform from memory text to in memory text.
+            </summary>
+            <param name="xslString">The xsl text transform.</param>
+            <param name="xmlString">The xml text to transform.</param>
+            <param name="xsltArgumentList">The xslt argument list</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.UTF32.FromMemoryToFile(System.String,System.String,System.String)">
+            <summary>
+            Transform from memory text to output file.
+            </summary>
+            <param name="xslString">The xsl text transform.</param>
+            <param name="xmlString">The xml text to transform.</param>
+            <param name="outputFile">The file to write the transformed result to.</param>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.UTF32.FromMemoryToFile(System.String,System.String,System.String,System.Xml.Xsl.XsltArgumentList)">
+            <summary>
+            Transform from memory text to output file.
+            </summary>
+            <param name="xslString">The xsl text transform.</param>
+            <param name="xmlString">The xml text to transform.</param>
+            <param name="outputFile">The file to write the transformed result to.</param>
+            <param name="xsltArgumentList">The xslt argument list</param>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.UTF32.FromFileToFile(System.String,System.String,System.String,System.Xml.Xsl.XsltArgumentList)">
+            <summary>
+            Transform from file to in file.
+            </summary>
+            <param name="xslString">The xsl string transform.</param>
+            <param name="xmlFile">The xml file to transform.</param>
+            <param name="xsltArgumentList">The xslt argument list</param>
+            <param name="outputFile">The file to write the transformed result to.</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+        <member name="T:Nequeo.Xml.Xsl.Transformation.UTF7">
+            <summary>
+            Xsl UTF7 transformation
+            </summary>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.UTF7.FromFileToString(System.String,System.String)">
+            <summary>
+            Transform from file to in memory text.
+            </summary>
+            <param name="xslFile">The xsl file transform.</param>
+            <param name="xmlFile">The xml file to transform.</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.UTF7.FromFileToString(System.String,System.String,System.Xml.Xsl.XsltArgumentList)">
+            <summary>
+            Transform from file to in memory text.
+            </summary>
+            <param name="xslFile">The xsl file transform.</param>
+            <param name="xmlFile">The xml file to transform.</param>
+            <param name="xsltArgumentList">The xslt argument list</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.UTF7.FromMemoryToMemory(System.String,System.String)">
+            <summary>
+            Transform from memory text to in memory text.
+            </summary>
+            <param name="xslString">The xsl text transform.</param>
+            <param name="xmlString">The xml text to transform.</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.UTF7.FromMemoryToMemory(System.String,System.String,System.Xml.Xsl.XsltArgumentList)">
+            <summary>
+            Transform from memory text to in memory text.
+            </summary>
+            <param name="xslString">The xsl text transform.</param>
+            <param name="xmlString">The xml text to transform.</param>
+            <param name="xsltArgumentList">The xslt argument list</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.UTF7.FromMemoryToFile(System.String,System.String,System.String)">
+            <summary>
+            Transform from memory text to output file.
+            </summary>
+            <param name="xslString">The xsl text transform.</param>
+            <param name="xmlString">The xml text to transform.</param>
+            <param name="outputFile">The file to write the transformed result to.</param>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.UTF7.FromMemoryToFile(System.String,System.String,System.String,System.Xml.Xsl.XsltArgumentList)">
+            <summary>
+            Transform from memory text to output file.
+            </summary>
+            <param name="xslString">The xsl text transform.</param>
+            <param name="xmlString">The xml text to transform.</param>
+            <param name="outputFile">The file to write the transformed result to.</param>
+            <param name="xsltArgumentList">The xslt argument list</param>
+        </member>
+        <member name="M:Nequeo.Xml.Xsl.Transformation.UTF7.FromFileToFile(System.String,System.String,System.String,System.Xml.Xsl.XsltArgumentList)">
+            <summary>
+            Transform from file to in file.
+            </summary>
+            <param name="xslString">The xsl string transform.</param>
+            <param name="xmlFile">The xml file to transform.</param>
+            <param name="xsltArgumentList">The xslt argument list</param>
+            <param name="outputFile">The file to write the transformed result to.</param>
+            <returns>The resulting transformed text.</returns>
+        </member>
+    </members>
+</doc>

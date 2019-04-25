@@ -1,0 +1,334 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nequeo.Drawing.Document</name>
+    </assembly>
+    <members>
+        <member name="T:Nequeo.Drawing.Pdf.Document">
+            <summary>
+            PDF document creator.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Drawing.Pdf.Document.#ctor">
+            <summary>
+            PDF document creator.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Drawing.Pdf.Document.ReadPdf(System.IO.Stream,System.String)">
+            <summary>
+            Read the stream containing the PDF data.
+            </summary>
+            <param name="pdf">The PDf stream.</param>
+            <param name="password">The password used to protect the document.</param>
+            <returns>The PDF document.</returns>
+        </member>
+        <member name="M:Nequeo.Drawing.Pdf.Document.ExtractText(System.IO.Stream,System.String,Nequeo.Text.EncodingType)">
+            <summary>
+            Extract all the text from each page within the PDF document.
+            </summary>
+            <param name="pdf">The PDf stream.</param>
+            <param name="password">The password used to protect the document.</param>
+            <param name="encoding">The encoding the extracted text should be converted to; the default is UTF8</param>
+            <returns>The complete text extracted.</returns>
+        </member>
+        <member name="M:Nequeo.Drawing.Pdf.Document.ExtractText(System.IO.Stream,System.Int32,System.Int32,System.String,Nequeo.Text.EncodingType)">
+            <summary>
+            Extract all the text from the specified page interval within the PDF document.
+            </summary>
+            <param name="pdf">The PDf stream.</param>
+            <param name="fromPage">From page (must be greater than zero).</param>
+            <param name="toPage">To page (must be greater than zero).</param>
+            <param name="password">The password used to protect the document.</param>
+            <param name="encoding">The encoding the extracted text should be converted to; the default is UTF8</param>
+            <returns>The complete text extracted.</returns>
+        </member>
+        <member name="M:Nequeo.Drawing.Pdf.Document.ExtractText(System.IO.Stream,System.Int32[],System.String,Nequeo.Text.EncodingType)">
+            <summary>
+            Extract all the text from the specified pages within the PDF document.
+            </summary>
+            <param name="pdf">The PDf stream.</param>
+            <param name="pages">The list of page numbers to extract text from.</param>
+            <param name="password">The password used to protect the document.</param>
+            <param name="encoding">The encoding the extracted text should be converted to; the default is UTF8</param>
+            <returns>The complete text extracted.</returns>
+        </member>
+        <member name="M:Nequeo.Drawing.Pdf.Document.CreateText(System.IO.Stream,System.String,Nequeo.Drawing.Pdf.Font)">
+            <summary>
+            Create a new PDF text document.
+            </summary>
+            <param name="pdf">The PDF file stream.</param>
+            <param name="text">The text to add to the document.</param>
+            <param name="font">The text font to create.</param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Nequeo.Drawing.Pdf.Document.CreateText(System.IO.Stream,System.String,Nequeo.Drawing.Pdf.Font,System.String)">
+            <summary>
+            Create a new PDF text document.
+            </summary>
+            <param name="pdf">The PDF file stream.</param>
+            <param name="text">The text to add to the document.</param>
+            <param name="font">The text font to create.</param>
+            <param name="password">The password used to protect the document.</param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Nequeo.Drawing.Pdf.Document.PageContainsImages(System.IO.Stream,System.Int32,System.String)">
+            <summary>
+            Checks whether a specified page of a PDF file contains images.
+            </summary> 
+            <param name="pdf">The PDF stream.</param>
+            <param name="pageNumber">The page number to look for images.</param>
+            <param name="password">The password used to protect the document.</param>
+            <returns>True if the page contains at least one image; false otherwise.</returns> 
+        </member>
+        <member name="M:Nequeo.Drawing.Pdf.Document.ExtractImages(System.IO.Stream,System.String)">
+            <summary>
+            Extracts all images from a specified page of a PDF file.
+            </summary> 
+            <param name="pdf">The PDF stream.</param>
+            <param name="password">The password used to protect the document.</param>
+            <returns>Returns an array of images
+            where the key is a suggested file name, in the format: PDF filename without extension,  
+            page number and image index in the page.</returns> 
+        </member>
+        <member name="M:Nequeo.Drawing.Pdf.Document.ExtractImages(System.IO.Stream,System.Int32,System.String)">
+            <summary>
+            Extracts all images from a specified page of a PDF file.
+            </summary> 
+            <param name="pdf">The PDF stream.</param>
+            <param name="pageNumber">The page number to look for images.</param>
+            <param name="password">The password used to protect the document.</param>
+            <returns>Returns an array of images
+            where the key is a suggested file name, in the format: PDF filename without extension,  
+            page number and image index in the page.</returns> 
+        </member>
+        <member name="M:Nequeo.Drawing.Pdf.Document.CreateTable">
+            <summary>
+            Create pdf table.
+            </summary>
+            <returns>The PDF table.</returns>
+        </member>
+        <member name="T:Nequeo.Drawing.Pdf.ImageRenderListener">
+            <summary>
+            Image Render Listener Helper.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Drawing.Pdf.Font">
+            <summary>
+            PDF document font.
+            </summary>
+        </member>
+        <member name="T:Nequeo.Drawing.Pdf.Font.FontEncoding">
+            <summary>
+            Font encoding.
+            </summary>
+        </member>
+        <member name="F:Nequeo.Drawing.Pdf.Font.FontEncoding.Undefined">
+            <summary>
+            Undefined
+            </summary>
+        </member>
+        <member name="F:Nequeo.Drawing.Pdf.Font.FontEncoding.CP1250">
+            <summary>
+            Cp1250
+            </summary>
+        </member>
+        <member name="F:Nequeo.Drawing.Pdf.Font.FontEncoding.CP1252">
+            <summary>
+            Cp1252
+            </summary>
+        </member>
+        <member name="F:Nequeo.Drawing.Pdf.Font.FontEncoding.CP1257">
+            <summary>
+            Cp1257
+            </summary>
+        </member>
+        <member name="F:Nequeo.Drawing.Pdf.Font.FontEncoding.WINANSI">
+            <summary>
+            Cp1252
+            </summary>
+        </member>
+        <member name="F:Nequeo.Drawing.Pdf.Font.FontEncoding.MACROMAN">
+            <summary>
+            MacRoman
+            </summary>
+        </member>
+        <member name="T:Nequeo.Drawing.Pdf.Font.FontFamily">
+            <summary>
+            Font family.
+            </summary>
+        </member>
+        <member name="F:Nequeo.Drawing.Pdf.Font.FontFamily.Undefined">
+            <summary>
+            Undefined
+            </summary>
+        </member>
+        <member name="F:Nequeo.Drawing.Pdf.Font.FontFamily.Courier">
+            <summary>
+            Courier
+            </summary>
+        </member>
+        <member name="F:Nequeo.Drawing.Pdf.Font.FontFamily.Courier_Bold">
+            <summary>
+            Courier-Bold
+            </summary>
+        </member>
+        <member name="F:Nequeo.Drawing.Pdf.Font.FontFamily.Courier_Oblique">
+            <summary>
+            Courier-Oblique
+            </summary>
+        </member>
+        <member name="F:Nequeo.Drawing.Pdf.Font.FontFamily.Courier_BoldOblique">
+            <summary>
+            Courier-BoldOblique
+            </summary>
+        </member>
+        <member name="F:Nequeo.Drawing.Pdf.Font.FontFamily.Helvetica">
+            <summary>
+            Helvetica
+            </summary>
+        </member>
+        <member name="F:Nequeo.Drawing.Pdf.Font.FontFamily.Helvetica_Bold">
+            <summary>
+            Helvetica-Bold
+            </summary>
+        </member>
+        <member name="F:Nequeo.Drawing.Pdf.Font.FontFamily.Helvetica_Oblique">
+            <summary>
+            Helvetica-Oblique
+            </summary>
+        </member>
+        <member name="F:Nequeo.Drawing.Pdf.Font.FontFamily.Helvetica_BoldOblique">
+            <summary>
+            Helvetica-BoldOblique
+            </summary>
+        </member>
+        <member name="F:Nequeo.Drawing.Pdf.Font.FontFamily.Symbol">
+            <summary>
+            Symbol
+            </summary>
+        </member>
+        <member name="F:Nequeo.Drawing.Pdf.Font.FontFamily.Times_Roman">
+            <summary>
+            Times-Roman
+            </summary>
+        </member>
+        <member name="F:Nequeo.Drawing.Pdf.Font.FontFamily.Times_Bold">
+            <summary>
+            Times-Bold
+            </summary>
+        </member>
+        <member name="F:Nequeo.Drawing.Pdf.Font.FontFamily.Times_Italic">
+            <summary>
+            Times-Italic
+            </summary>
+        </member>
+        <member name="F:Nequeo.Drawing.Pdf.Font.FontFamily.Times_BoldItalic">
+            <summary>
+            Times-BoldItalic
+            </summary>
+        </member>
+        <member name="F:Nequeo.Drawing.Pdf.Font.FontFamily.ZapfDingbats">
+            <summary>
+            ZapfDingbats
+            </summary>
+        </member>
+        <member name="M:Nequeo.Drawing.Pdf.Font.#ctor(Nequeo.Drawing.Pdf.Font.FontFamily)">
+            <summary>
+            PDF document font.
+            </summary>
+            <param name="fontFamily">The font family.</param>
+        </member>
+        <member name="M:Nequeo.Drawing.Pdf.Font.#ctor(Nequeo.Drawing.Pdf.Font.FontFamily,System.Drawing.Color)">
+            <summary>
+            PDF document font.
+            </summary>
+            <param name="fontFamily">The font family.</param>
+            <param name="color">The font color.</param>
+        </member>
+        <member name="M:Nequeo.Drawing.Pdf.Font.#ctor(Nequeo.Drawing.Pdf.Font.FontFamily,System.Drawing.Color,System.Drawing.FontStyle)">
+            <summary>
+            PDF document font.
+            </summary>
+            <param name="fontFamily">The font family.</param>
+            <param name="color">The font color.</param>
+            <param name="style">The font style.</param>
+        </member>
+        <member name="M:Nequeo.Drawing.Pdf.Font.#ctor(Nequeo.Drawing.Pdf.Font.FontFamily,System.Drawing.Color,System.Drawing.FontStyle,System.Single)">
+            <summary>
+            PDF document font.
+            </summary>
+            <param name="fontFamily">The font family.</param>
+            <param name="color">The font color.</param>
+            <param name="style">The font style.</param>
+            <param name="fontSize">The font size.</param>
+        </member>
+        <member name="M:Nequeo.Drawing.Pdf.Font.#ctor(System.String)">
+            <summary>
+            PDF document font.
+            </summary>
+            <param name="fontName">The font name or file name (e.g. Courier, ..\fonts\arial.ttf).</param>
+        </member>
+        <member name="M:Nequeo.Drawing.Pdf.Font.#ctor(System.String,System.String)">
+            <summary>
+            PDF document font.
+            </summary>
+            <param name="fontName">The font name or file name (e.g. Courier, ..\fonts\arial.ttf).</param>
+            <param name="encoding">The font encoding.</param>
+        </member>
+        <member name="M:Nequeo.Drawing.Pdf.Font.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            PDF document font.
+            </summary>
+            <param name="fontName">The font name or file name (e.g. Courier, ..\fonts\arial.ttf).</param>
+            <param name="encoding">The font encoding.</param>
+            <param name="embedded">The font embedded.</param>
+        </member>
+        <member name="M:Nequeo.Drawing.Pdf.Font.#ctor(System.String,Nequeo.Drawing.Pdf.Font.FontEncoding)">
+            <summary>
+            PDF document font.
+            </summary>
+            <param name="fontName">The font name or file name (e.g. Courier, ..\fonts\arial.ttf).</param>
+            <param name="encoding">The font encoding.</param>
+        </member>
+        <member name="M:Nequeo.Drawing.Pdf.Font.#ctor(System.String,Nequeo.Drawing.Pdf.Font.FontEncoding,System.Boolean)">
+            <summary>
+            PDF document font.
+            </summary>
+            <param name="fontName">The font name or file name (e.g. Courier, ..\fonts\arial.ttf).</param>
+            <param name="encoding">The font encoding.</param>
+            <param name="embedded">The font embedded.</param>
+        </member>
+        <member name="P:Nequeo.Drawing.Pdf.Font.FontColor">
+            <summary>
+            Gets or sets the font color.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Drawing.Pdf.Font.FontStyle">
+            <summary>
+            Gets or sets the font style.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Drawing.Pdf.Font.FontSize">
+            <summary>
+            Gets or sets the font size.
+            </summary>
+        </member>
+        <member name="P:Nequeo.Drawing.Pdf.Font.Embedded">
+            <summary>
+            Gets or sets the font embedded mode.
+            </summary>
+        </member>
+        <member name="M:Nequeo.Drawing.Pdf.Font.GetFont">
+            <summary>
+            Get the converted font.
+            </summary>
+            <returns>The text font.</returns>
+        </member>
+        <member name="M:Nequeo.Drawing.Pdf.Font.GetBaseFont">
+            <summary>
+            Get the converted font.
+            </summary>
+            <returns>The text font.</returns>
+        </member>
+    </members>
+</doc>
